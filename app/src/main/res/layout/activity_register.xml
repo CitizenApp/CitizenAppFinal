@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="329dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Registro de Usuario"
+        android:textColor="#BA68C8"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/registroNombre_et"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Nombre de Usuario"
+        android:inputType="textPersonName"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenUsuarioMenu_img" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:id="@+id/imagenUsuarioMenu_img"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="20dp"
+
+        android:src="@drawable/usuario"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/emailRegistro_et"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Correo Electronico"
+        android:inputType="textEmailAddress"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registroNombre_et" />
+
+    <EditText
+        android:id="@+id/passRegistro_et"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegistro_et" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="255dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="112dp"
+        android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passRegistro_et"
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="#ba68c8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loguearse_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="¿Ya tienes Cuenta? Iniciar Sesión"
+        android:textColor="#BA68C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

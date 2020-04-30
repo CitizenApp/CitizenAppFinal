@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.bluescreen.citizenapp.ui.home.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cerrarSesion"
+        android:name="com.bluescreen.citizenapp.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_publicarNoticia"
+        android:name="com.bluescreen.citizenapp.ui.crearNoticiaHomeFragment"
+        android:label="Publicar Noticia"
+        tools:layout="@layout/crear_noticia_home_fragment" />
+    <fragment
+        android:id="@+id/nav_campus"
+        android:name="com.bluescreen.citizenapp.ui.campusInteractivoFragment"
+        android:label="Selecciona Asignatura"
+        tools:layout="@layout/fragment_campus_interactivo" />
+    <fragment
+        android:id="@+id/nav_desafios"
+        android:name="com.bluescreen.citizenapp.ui.desafiosTabFragment"
+        android:label="Desafios"
+        tools:layout="@layout/fragment_desafios_tab" />
+
+</navigation>

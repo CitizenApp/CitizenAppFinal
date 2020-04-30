@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "325717354154",
+    "firebase_url": "https://citizenapp-70236.firebaseio.com",
+    "project_id": "citizenapp-70236",
+    "storage_bucket": "citizenapp-70236.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325717354154:android:574b6f9ca9b21b5ceb12d3",
+        "android_client_info": {
+          "package_name": "com.bluescreen.citizenapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325717354154-me50njgcd1n3t46fve68hvo1ib9vuagj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bluescreen.citizenapp",
+            "certificate_hash": "af7668454207d41acd5b50695c7b49fc0bad4863"
+          }
+        },
+        {
+          "client_id": "325717354154-qv2aq9s7kjtv8appjkofr3nu2gks8iip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvlLc5KG0cVBy-9eDEMw7__SomEkZbNyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325717354154-qv2aq9s7kjtv8appjkofr3nu2gks8iip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

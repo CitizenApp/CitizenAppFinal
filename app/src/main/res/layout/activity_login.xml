@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="254dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.127"
+        app:srcCompat="@drawable/logo3" />
+
+    <EditText
+        android:id="@+id/emailLogin_et"
+        android:layout_width="264dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Correo Electronico"
+        android:inputType="textEmailAddress"
+        android:shadowColor="#BA68C8"
+        android:textColorLink="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_iv" />
+
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonOutlinedStyle"
+        app:strokeColor="#ba68c8"
+        android:id="@+id/login_btn"
+        android:layout_width="255dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="156dp"
+        android:text="Iniciar Sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/passLogin_et"
+        android:layout_width="264dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:shadowColor="#BA68C8"
+        android:textColorLink="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLogin_et" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registrarse_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Registrar Usuario"
+        android:textColor="#BA68C8"
+        app:layout_constraintBottom_toTopOf="@+id/logo_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loguearse_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Recuperar Contraseña"
+        android:textColor="#BA68C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn"
+        app:layout_constraintVertical_bias="0.851" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
