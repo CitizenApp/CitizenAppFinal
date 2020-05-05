@@ -32,5 +32,15 @@
         android:name="com.bluescreen.citizenapp.ui.desafiosTabFragment"
         android:label="Desafios"
         tools:layout="@layout/fragment_desafios_tab" />
+    <fragment
+        android:id="@+id/nav_Inspectoria"
+        android:name="com.bluescreen.citizenapp.ui.InspectoriaFragment"
+        android:label="Inspectoria"
+        tools:layout="@layout/fragment_inspectoria" />
+    <fragment
+        android:id="@+id/nav_direccion"
+        android:name="com.bluescreen.citizenapp.ui.FragmentDireccion"
+        android:label="Direccion e Informaciones"
+        tools:layout="@layout/fragment_direccion" />
 
 </navigation>

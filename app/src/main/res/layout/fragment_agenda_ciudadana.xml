@@ -1,0 +1,204 @@
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context=".direccioneinformaciones.FragmentAgendaCiudadana">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4DEC87"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center"
+            android:text="Agenda Ciudana"
+            android:textSize="23sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <com.vipul.hp_hp.timelineview.TimelineView
+            android:paddingLeft="30dp"
+            app:marker="@drawable/ic_textsms_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:marker_size="20dp"
+            app:line_size="1dp"
+            app:line="@color/colorAccent"/>
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:text="21 Junio"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:paddingLeft="20dp"
+                android:text="El colegio logra sacar la excelencia "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="15dp"
+                android:paddingLeft="20dp"
+                android:text="www.noticias.cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <com.vipul.hp_hp.timelineview.TimelineView
+            android:paddingLeft="30dp"
+            app:marker="@drawable/ic_textsms_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:marker_size="20dp"
+            app:line_size="1dp"
+            app:line="@color/colorPrimary"/>
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:text="18 Mayo"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:paddingLeft="20dp"
+                android:text="Campeonato fememino sale campeon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="15dp"
+                android:paddingLeft="20dp"
+                android:text="www.deportes.cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <com.vipul.hp_hp.timelineview.TimelineView
+            android:paddingLeft="30dp"
+            app:marker="@drawable/ic_textsms_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:marker_size="20dp"
+            app:line_size="1dp"
+            app:line="@color/colorAccent"/>
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:text="11 Mayo"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:paddingLeft="20dp"
+                android:text="LLegan nuevos implementos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="15dp"
+                android:paddingLeft="20dp"
+                android:text="www.chillan.cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <com.vipul.hp_hp.timelineview.TimelineView
+            android:paddingLeft="30dp"
+            app:marker="@drawable/ic_textsms_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:marker_size="20dp"
+            app:line_size="1dp"
+            app:line="@color/colorPrimary"/>
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:text="10 Mayo"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:paddingLeft="20dp"
+                android:text="Colegio se sumara a la causa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="15dp"
+                android:paddingLeft="20dp"
+                android:text="www.colegio.cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -246,6 +246,21 @@ attr colorSecondaryVariant
 attr colorSurface
 attr colorSwitchThumbNormal
 attr commitIcon
+attr compactCalendarBackgroundColor
+attr compactCalendarCurrentDayBackgroundColor
+attr compactCalendarCurrentDayIndicatorStyle
+attr compactCalendarCurrentDayTextColor
+attr compactCalendarCurrentSelectedDayBackgroundColor
+attr compactCalendarCurrentSelectedDayIndicatorStyle
+attr compactCalendarCurrentSelectedDayTextColor
+attr compactCalendarDisplayOtherMonthDays
+attr compactCalendarEventIndicatorStyle
+attr compactCalendarMultiEventIndicatorColor
+attr compactCalendarOtherMonthDaysTextColor
+attr compactCalendarShouldSelectFirstDayOfMonthOnScroll
+attr compactCalendarTargetHeight
+attr compactCalendarTextColor
+attr compactCalendarTextSize
 attr constraintSet
 attr constraint_referenced_ids
 attr content
@@ -516,8 +531,11 @@ attr layout_scrollFlags
 attr layout_scrollInterpolator
 attr liftOnScroll
 attr liftOnScrollTargetViewId
+attr line
 attr lineHeight
 attr lineSpacing
+attr line_orientation
+attr line_size
 attr listChoiceBackgroundIndicator
 attr listChoiceIndicatorMultipleAnimated
 attr listChoiceIndicatorSingleAnimated
@@ -535,6 +553,9 @@ attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
 attr logo
 attr logoDescription
+attr marker
+attr markerInCenter
+attr marker_size
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogTheme
 attr materialAlertDialogTitleIconStyle
@@ -823,6 +844,7 @@ color checkbox_themeable_attribute_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color colorwhite
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -1417,10 +1439,14 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable art
+drawable artesbg
+drawable asistencia
 drawable autoestima
 drawable avd_hide_password
 drawable avd_show_password
+drawable backbox
 drawable backgroundpurple
+drawable biblioteca
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1429,6 +1455,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cienciasbg
 drawable ciudadana
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -1456,14 +1483,26 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable diverso
+drawable educacion
+drawable electronica
+drawable electronicaf
 drawable fab_bg_mini
 drawable fab_bg_normal
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable his
 drawable historia
+drawable historiabg
+drawable ic_access_time_black_24dp
+drawable ic_announcement_black_24dp
+drawable ic_attendance_recap
+drawable ic_bg_topheader
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
+drawable ic_content_paste_black_24dp
 drawable ic_edit_black_24dp
+drawable ic_file_download_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
@@ -1477,8 +1516,17 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_textsms_black_24dp
+drawable icon
+drawable justificativo
+drawable lapiz
 drawable lenguaje
+drawable lenguajebg
 drawable logo3
+drawable logo4
+drawable marker
+drawable matematicas
+drawable matematicasbg
 drawable math
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1490,6 +1538,7 @@ drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable negocio
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1502,12 +1551,19 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable opinion
+drawable paleta
+drawable pase
+drawable porcentaje
+drawable qr
 drawable registro
 drawable science
 drawable side_nav_bar
+drawable sugerencias
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable unnamed
 drawable usuario
 drawable vida_sana
 id ALT
@@ -1573,21 +1629,32 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id activity_main
 id add
 id adjust_height
 id adjust_width
+id agenda
 id alertTitle
 id all
 id always
+id artes
 id async
 id auto
 id barrier
 id beginning
+id bg_top_header
 id blocking
 id bottom
+id btn_justificacion
 id buttonPanel
+id buzon
 id cancel_action
 id cancel_button
+id card_asistencia
+id card_justificaciones
+id card_pases
+id card_sugerencias
+id card_view
 id center
 id center_horizontal
 id center_vertical
@@ -1601,6 +1668,8 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id compactcalendar_view
+id comunicados
 id confirm_button
 id container
 id contenido_noticiasHome2
@@ -1627,6 +1696,9 @@ id disableHome
 id down
 id drawer_layout
 id dropdown_menu
+id editText2
+id editText3
+id editText4
 id edit_query
 id emailLogin_et
 id emailRegistro_et
@@ -1644,6 +1716,7 @@ id fade
 id fecha_noticiaHome
 id fill
 id fill_horizontal
+id fill_large_indicator
 id fill_vertical
 id filled
 id filter_chip
@@ -1657,22 +1730,25 @@ id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
-id guideline
-id guideline2
-id guideline3
 id hideable
 id home
 id homeAsUp
+id horizontal
 id icon
 id icon_group
 id icon_only
+id icono
+id icono2
+id icono3
+id icono4
+id icono5
 id ifRoom
 id image
+id imageVIew
 id imageView
 id imageView2
 id imageView3
 id imageView4
-id imageView5
 id imageView6
 id imageView8
 id imagenUsuarioMenu_img
@@ -1682,6 +1758,7 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layoutInput
 id left
 id light
 id line1
@@ -1738,6 +1815,7 @@ id nav_view
 id navigation_header_container
 id never
 id noScroll
+id no_fill_large_indicator
 id nombreUsuarioMenu
 id none
 id normal
@@ -1746,6 +1824,7 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id organigrama
 id outline
 id packed
 id pager
@@ -1798,11 +1877,13 @@ id showTitle
 id skipCollapsed
 id slide
 id smallLabel
+id small_indicator
 id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner_justificacion
 id split_action_bar
 id spread
 id spread_inside
@@ -1833,11 +1914,17 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView10
+id textView11
+id textView12
 id textView2
 id textView3
-id textView4
 id textView5
 id textView6
+id textView7
+id textView8
+id textView9
+id textViewName
 id text_gallery
 id text_home
 id text_input_end_icon
@@ -1850,6 +1937,11 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id titulo
+id titulo1
+id titulo2
+id titulo3
+id titulo5
 id titulo_noticiaHome
 id toolbar
 id top
@@ -1860,6 +1952,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id turno
 id txtDescripcionNoticia
 id txtFechaNoticia
 id txtTituloNoticia
@@ -1868,6 +1961,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_photo
+id vertical
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -1960,15 +2055,29 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_agenda
+layout fragment_agenda_ciudadana
+layout fragment_asistencia_inspectoria
+layout fragment_avisos
+layout fragment_buzon
 layout fragment_campus_interactivo
+layout fragment_comunicados
 layout fragment_desafios
 layout fragment_desafios_tab
 layout fragment_desafios_tab1
 layout fragment_desafios_tab2
+layout fragment_direccion
+layout fragment_documentos
+layout fragment_fragmentaula
 layout fragment_gallery
 layout fragment_home
+layout fragment_inspectoria
+layout fragment_justificacion_inspectoria
 layout fragment_mi_colegio
+layout fragment_organigrama
+layout fragment_pases_acceso
 layout fragment_slideshow
+layout fragment_turnos
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2874,6 +2983,7 @@ styleable CircleImageView civ_border_color civ_border_overlay civ_border_width c
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
+styleable CompactCalendarView compactCalendarBackgroundColor compactCalendarCurrentDayBackgroundColor compactCalendarCurrentDayIndicatorStyle compactCalendarCurrentDayTextColor compactCalendarCurrentSelectedDayBackgroundColor compactCalendarCurrentSelectedDayIndicatorStyle compactCalendarCurrentSelectedDayTextColor compactCalendarDisplayOtherMonthDays compactCalendarEventIndicatorStyle compactCalendarMultiEventIndicatorColor compactCalendarOtherMonthDaysTextColor compactCalendarShouldSelectFirstDayOfMonthOnScroll compactCalendarTargetHeight compactCalendarTextColor compactCalendarTextSize
 styleable CompoundButton android_button buttonCompat buttonTint buttonTintMode
 styleable ConstraintLayout_Layout android_orientation android_maxWidth android_maxHeight android_minWidth android_minHeight barrierAllowsGoneWidgets barrierDirection chainUseRtl constraintSet constraint_referenced_ids layout_constrainedHeight layout_constrainedWidth layout_constraintBaseline_creator layout_constraintBaseline_toBaselineOf layout_constraintBottom_creator layout_constraintBottom_toBottomOf layout_constraintBottom_toTopOf layout_constraintCircle layout_constraintCircleAngle layout_constraintCircleRadius layout_constraintDimensionRatio layout_constraintEnd_toEndOf layout_constraintEnd_toStartOf layout_constraintGuide_begin layout_constraintGuide_end layout_constraintGuide_percent layout_constraintHeight_default layout_constraintHeight_max layout_constraintHeight_min layout_constraintHeight_percent layout_constraintHorizontal_bias layout_constraintHorizontal_chainStyle layout_constraintHorizontal_weight layout_constraintLeft_creator layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_creator layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintTop_creator layout_constraintTop_toBottomOf layout_constraintTop_toTopOf layout_constraintVertical_bias layout_constraintVertical_chainStyle layout_constraintVertical_weight layout_constraintWidth_default layout_constraintWidth_max layout_constraintWidth_min layout_constraintWidth_percent layout_editor_absoluteX layout_editor_absoluteY layout_goneMarginBottom layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginRight layout_goneMarginStart layout_goneMarginTop layout_optimizationLevel
 styleable ConstraintLayout_placeholder content emptyVisibility
@@ -2951,6 +3061,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable timeline_style line line_orientation line_size marker markerInCenter marker_size
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

@@ -1,13 +1,20 @@
 package com.bluescreen.citizenapp.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
+import com.bluescreen.citizenapp.AgendaFragment;
+import com.bluescreen.citizenapp.AvisosFragment;
+import com.bluescreen.citizenapp.DocumentosFragment;
+import com.bluescreen.citizenapp.Fragmentaula;
 import com.bluescreen.citizenapp.R;
 
 /**
@@ -21,9 +28,11 @@ public class campusInteractivoFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    RelativeLayout artes;
 
     public campusInteractivoFragment() {
         // Required empty public constructor
@@ -61,5 +70,23 @@ public class campusInteractivoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_campus_interactivo, container, false);
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        RelativeLayout artes=getView().findViewById(R.id.artes);
+        artes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create new fragment and transaction
+                Fragment someFragment = new Fragmentaula();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.nav_host_fragment, someFragment );
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
     }
 }

@@ -7,7 +7,7 @@
 
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Inicio" />
         <item
             android:id="@+id/nav_campus"
@@ -31,19 +31,14 @@
 
 
 
-
-
         <item
-            android:id="@+id/nav_publicarNoticia"
+            android:id="@+id/nav_cerrarSesion"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Publicar Noticia" />
+            android:title="Cerrar Sesion" />
+
+
+
     </group>
-<group>
-    <menu>
-    <item
-        android:id="@+id/nav_cerrarSesion"
-        android:icon="@drawable/ic_menu_slideshow"
-        android:title="Cerrar Sesion" />
-    </menu>
-</group>
+
+
 </menu>
