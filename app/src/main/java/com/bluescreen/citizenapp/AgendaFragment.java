@@ -25,10 +25,7 @@ public class AgendaFragment extends Fragment {
     private String mParam2;
 
 
-    holiiii ajsdadkhadgajdgada
-
-
-    wdjifhdifhidshfiudshifu
+    mi botellita
 
     public AgendaFragment() {
         // Required empty public constructor
