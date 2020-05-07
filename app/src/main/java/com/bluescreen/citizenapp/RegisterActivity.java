@@ -127,6 +127,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     AtributosGlobales.capturarEmail = email;
                     AtributosGlobales.capturarPass = password;
                     AtributosGlobales.capturarUsername = nombre2;
+
+                    tus atributitos
                     usuarios mio = new usuarios(
                             nombre2,
                             email,
