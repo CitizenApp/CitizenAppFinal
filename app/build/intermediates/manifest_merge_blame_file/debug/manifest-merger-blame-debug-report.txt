@@ -6,248 +6,248 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml
+8-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml
+9-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:6:5-80
-12-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:6:22-77
+12-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:6:5-80
+12-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:6:22-77
 13
 14    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 15    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:26:5-79
-16-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:26:22-76
+16-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:26:5-79
+16-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:26:22-76
 17    <uses-permission android:name="android.permission.WAKE_LOCK" />
-17-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:25:5-68
-17-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:25:22-65
+17-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:25:5-68
+17-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:25:22-65
 18    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-18-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:26:5-110
-18-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:26:22-107
+18-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:26:5-110
+18-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:26:22-107
 19    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-19-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:26:5-82
-19-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:26:22-79
+19-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:26:5-82
+19-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:26:22-79
 20
 21    <application
-21-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:8:5-35:19
+21-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:8:5-35:19
 22        android:allowBackup="true"
-22-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:9:9-35
+22-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:9:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.1.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\bcfc0b80df78591183083cc148e1cf2c\core-1.1.0\AndroidManifest.xml:24:18-86
+23-->[androidx.core:core:1.1.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\bcfc0b80df78591183083cc148e1cf2c\core-1.1.0\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:icon="@mipmap/ic_launcher"
-25-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:10:9-43
+25-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:10:9-43
 26        android:label="@string/app_name"
-26-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:11:9-41
+26-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:11:9-41
 27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:12:9-54
+27-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:12:9-54
 28        android:supportsRtl="true"
-28-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:13:9-35
+28-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:13:9-35
 29        android:testOnly="true"
 30        android:theme="@style/AppTheme"
-30-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:14:9-40
+30-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:14:9-40
 31        android:usesCleartextTraffic="true" >
-31-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:15:9-44
+31-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:15:9-44
 32        <activity android:name="com.bluescreen.citizenapp.Profe.Registerprueba" />
-32-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:16:9-67
-32-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:16:19-55
+32-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:16:9-67
+32-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:16:19-55
 33        <activity android:name="com.bluescreen.citizenapp.Profe.Profeactivity" />
-33-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:17:9-57
-33-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:17:19-54
+33-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:17:9-57
+33-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:17:19-54
 34        <activity
-34-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:18:9-21:59
+34-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:18:9-21:59
 35            android:name="com.bluescreen.citizenapp.ui.desafiosTabbedFragment"
-35-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:19:13-54
+35-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:19:13-54
 36            android:label="@string/title_activity_desafios_tabbed_fragment"
-36-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:20:13-76
+36-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:20:13-76
 37            android:theme="@style/AppTheme.NoActionBar" />
-37-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:21:13-56
+37-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:21:13-56
 38        <activity
-38-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:22:9-25:59
+38-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:22:9-25:59
 39            android:name="com.bluescreen.citizenapp.InicioActivity"
-39-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:23:13-43
+39-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:23:13-43
 40            android:label="@string/title_activity_inicio"
-40-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:24:13-58
+40-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:24:13-58
 41            android:theme="@style/AppTheme.NoActionBar" />
-41-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:25:13-56
+41-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:25:13-56
 42        <activity android:name="com.bluescreen.citizenapp.RegisterActivity" />
-42-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:26:9-54
-42-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:26:19-51
+42-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:26:9-54
+42-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:26:19-51
 43        <activity android:name="com.bluescreen.citizenapp.MainActivity" >
-43-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:27:9-33:20
-43-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:27:19-47
+43-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:27:9-33:20
+43-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:27:19-47
 44            <intent-filter>
-44-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:28:13-32:29
+44-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:28:13-32:29
 45                <action android:name="android.intent.action.MAIN" />
-45-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:29:17-69
-45-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:29:25-66
+45-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:29:17-69
+45-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:29:25-66
 46
 47                <category android:name="android.intent.category.LAUNCHER" />
-47-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:31:17-77
-47-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:31:27-74
+47-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:31:17-77
+47-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:31:27-74
 48            </intent-filter>
 49        </activity>
 50        <activity android:name="com.bluescreen.citizenapp.LoginActivity" />
-50-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:34:9-51
-50-->C:\Users\Ale\Desktop\CitizenAppFinalfinal\app\src\main\AndroidManifest.xml:34:19-48
+50-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:34:9-51
+50-->C:\Users\RonDrugs\Documents\CitizenAppFinal\app\src\main\AndroidManifest.xml:34:19-48
 51        <activity
-51-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:24:9-31:50
+51-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:24:9-31:50
 52            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-52-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:25:13-85
+52-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:25:13-85
 53            android:excludeFromRecents="true"
-53-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:26:13-46
+53-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:26:13-46
 54            android:exported="true"
-54-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:27:13-36
+54-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:27:13-36
 55            android:launchMode="singleTask"
-55-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:28:13-44
+55-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:28:13-44
 56            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-56-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:29:13-102
+56-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:29:13-102
 57            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-57-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:30:13-72
+57-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:30:13-72
 58
 59        <service
-59-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:33:9-39:19
+59-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:33:9-39:19
 60            android:name="com.google.firebase.components.ComponentDiscoveryService"
-60-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:34:13-84
+60-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:34:13-84
 61            android:directBootAware="true"
-61-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+61-->[com.google.firebase:firebase-common:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
 62            android:exported="false" >
-62-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:35:13-37
+62-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:35:13-37
 63            <meta-data
-63-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:36:13-38:85
+63-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:36:13-38:85
 64                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-64-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:37:17-109
+64-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:37:17-109
 65                android:value="com.google.firebase.components.ComponentRegistrar" />
-65-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:38:17-82
+65-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:38:17-82
 66            <meta-data
-66-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
+66-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
 67                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-67-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
+67-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
 68                android:value="com.google.firebase.components.ComponentRegistrar" />
-68-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
+68-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c8c55a9dfb88ee84ed4b575295b8e34f\jetified-firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
 69            <meta-data
-69-->[com.google.firebase:firebase-database:19.2.1] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3e824c51aee14a2eb43534159ffb335f\jetified-firebase-database-19.2.1\AndroidManifest.xml:32:13-34:85
+69-->[com.google.firebase:firebase-database:19.2.1] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3e824c51aee14a2eb43534159ffb335f\jetified-firebase-database-19.2.1\AndroidManifest.xml:32:13-34:85
 70                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-70-->[com.google.firebase:firebase-database:19.2.1] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3e824c51aee14a2eb43534159ffb335f\jetified-firebase-database-19.2.1\AndroidManifest.xml:33:17-109
+70-->[com.google.firebase:firebase-database:19.2.1] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3e824c51aee14a2eb43534159ffb335f\jetified-firebase-database-19.2.1\AndroidManifest.xml:33:17-109
 71                android:value="com.google.firebase.components.ComponentRegistrar" />
-71-->[com.google.firebase:firebase-database:19.2.1] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3e824c51aee14a2eb43534159ffb335f\jetified-firebase-database-19.2.1\AndroidManifest.xml:34:17-82
+71-->[com.google.firebase:firebase-database:19.2.1] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3e824c51aee14a2eb43534159ffb335f\jetified-firebase-database-19.2.1\AndroidManifest.xml:34:17-82
 72            <meta-data
-72-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\d734e85b2ea2f6b5c3dd2e12b4244ac5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:30:13-32:85
+72-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\d734e85b2ea2f6b5c3dd2e12b4244ac5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:30:13-32:85
 73                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-73-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\d734e85b2ea2f6b5c3dd2e12b4244ac5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:31:17-139
+73-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\d734e85b2ea2f6b5c3dd2e12b4244ac5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:31:17-139
 74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\d734e85b2ea2f6b5c3dd2e12b4244ac5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:32:17-82
+74-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\d734e85b2ea2f6b5c3dd2e12b4244ac5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:32:17-82
 75            <meta-data
-75-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
+75-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
 76                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-76-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
+76-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
 77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
+77-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
 78        </service>
 79
 80        <receiver
-80-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:29:9-33:20
+80-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:29:9-33:20
 81            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-81-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:30:13-85
+81-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:30:13-85
 82            android:enabled="true"
-82-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:31:13-35
+82-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:31:13-35
 83            android:exported="false" >
-83-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:32:13-37
+83-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:32:13-37
 84        </receiver>
 85        <receiver
-85-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:34:9-42:20
+85-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:34:9-42:20
 86            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
-86-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:35:13-100
+86-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:35:13-100
 87            android:enabled="true"
-87-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:36:13-35
+87-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:36:13-35
 88            android:exported="true"
-88-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:37:13-36
+88-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:37:13-36
 89            android:permission="android.permission.INSTALL_PACKAGES" >
-89-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:38:13-69
+89-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:38:13-69
 90            <intent-filter>
-90-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:39:13-41:29
+90-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:39:13-41:29
 91                <action android:name="com.android.vending.INSTALL_REFERRER" />
-91-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:40:17-79
-91-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:40:25-76
+91-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:40:17-79
+91-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:40:25-76
 92            </intent-filter>
 93        </receiver>
 94
 95        <service
-95-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:44:9-47:40
+95-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:44:9-47:40
 96            android:name="com.google.android.gms.measurement.AppMeasurementService"
-96-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:45:13-84
+96-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:45:13-84
 97            android:enabled="true"
-97-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:46:13-35
+97-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:46:13-35
 98            android:exported="false" />
-98-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:47:13-37
+98-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:47:13-37
 99        <service
-99-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:48:9-52:72
+99-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:48:9-52:72
 100            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-100-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:49:13-87
+100-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:49:13-87
 101            android:enabled="true"
-101-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:50:13-35
+101-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:50:13-35
 102            android:exported="false"
-102-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:51:13-37
+102-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:51:13-37
 103            android:permission="android.permission.BIND_JOB_SERVICE" />
-103-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:52:13-69
+103-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\c286a662b2c14e12c87c511e7fbec4aa\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:52:13-69
 104
 105        <receiver
-105-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
+105-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
 106            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-106-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
+106-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
 107            android:exported="true"
-107-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
+107-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
 108            android:permission="com.google.android.c2dm.permission.SEND" >
-108-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
+108-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
 109            <intent-filter>
-109-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
+109-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
 110                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-110-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
-110-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
+110-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
+110-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\jetified-firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
 111            </intent-filter>
 112        </receiver>
 113
 114        <activity
-114-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+114-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
 115            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-115-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+115-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
 116            android:exported="false"
-116-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+116-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
 117            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-117-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+117-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
 118
 119        <provider
-119-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+119-->[com.google.firebase:firebase-common:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
 120            android:name="com.google.firebase.provider.FirebaseInitProvider"
-120-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+120-->[com.google.firebase:firebase-common:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
 121            android:authorities="com.bluescreen.citizenapp.firebaseinitprovider"
-121-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+121-->[com.google.firebase:firebase-common:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
 122            android:exported="false"
-122-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+122-->[com.google.firebase:firebase-common:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
 123            android:initOrder="100" />
-123-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+123-->[com.google.firebase:firebase-common:19.3.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
 124
 125        <meta-data
-125-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+125-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 126            android:name="com.google.android.gms.version"
-126-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+126-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
 127            android:value="@integer/google_play_services_version" />
-127-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+127-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
 128
 129        <provider
-129-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+129-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
 130            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-130-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+130-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
 131            android:authorities="com.bluescreen.citizenapp.lifecycle-process"
-131-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+131-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
 132            android:exported="false"
-132-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+132-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
 133            android:multiprocess="true" />
-133-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ale\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+133-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\RonDrugs\.gradle\caches\transforms-2\files-2.1\f8e2b213c9c6535c422622afbf842b10\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
 134    </application>
 135
 136</manifest>

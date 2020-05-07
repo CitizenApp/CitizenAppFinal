@@ -112,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         cursoseleccionado="";
         final String nombre2 = usernameText.getText().toString();
         final String email = emailText.getText().toString().trim();
-        String password = passwordText.getText().toString().trim();
+        final String password = passwordText.getText().toString().trim();
 
 
        cursoseleccionado=cursos.getSelectedItem().toString();
@@ -124,6 +124,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (!task.isSuccessful()) {
                     progressDialog.dismiss();
+                    AtributosGlobales.capturarEmail = email;
+                    AtributosGlobales.capturarPass = password;
+                    AtributosGlobales.capturarUsername = nombre2;
                     usuarios mio = new usuarios(
                             nombre2,
                             email,
@@ -137,6 +140,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(mio).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
+
                             Toast.makeText(RegisterActivity.this, "completado", Toast.LENGTH_SHORT).show();
                         }
                     });
