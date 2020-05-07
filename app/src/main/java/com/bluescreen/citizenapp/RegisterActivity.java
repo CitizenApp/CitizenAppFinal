@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private int requestCode = 1;
     private ProgressDialog progressDialog;
 
-    int rol=3;
+    int rol;
     String cursoseleccionado="";
 
     Switch swtich;
@@ -77,20 +77,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         imageRegistro = (ImageView) findViewById(R.id.imagenUsuarioMenu_img);
         swtich=findViewById(R.id.switch1);
         cursos=findViewById(R.id.spinner);
-
-        databaseReference = FirebaseDatabase.getInstance().getReference();
-        imageRegistro.setOnClickListener(new View.OnClickListener() {
+        swtich.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-
-                if (Build.VERSION.SDK_INT >= 22) {
-                    checkandRequestPermission();
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    swtich.setText("Profesor");
+                    rol=1;
                 } else {
-                    opengallery();
+                    swtich.setText("Alumno");
+                    rol=0;
                 }
-
             }
         });
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
         registrarBtn.setOnClickListener(this);
         irloginBtn.setOnClickListener(this);
@@ -110,29 +110,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private  void Registrarusuario(){
         cursoseleccionado="";
-        rol =3;
         final String nombre2 = usernameText.getText().toString();
         final String email = emailText.getText().toString().trim();
         String password = passwordText.getText().toString().trim();
-        swtich.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    swtich.setText("Profesor");
-                    rol=2;
-                } else {
-                    swtich.setText("Alumno");
-                    rol=1;
-                }
-            }
-        });
+
 
        cursoseleccionado=cursos.getSelectedItem().toString();
+        progressDialog.setMessage("Realizando Registro de Usuario");
+        progressDialog.show();
 
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (!task.isSuccessful()) {
+                    progressDialog.dismiss();
                     usuarios mio = new usuarios(
                             nombre2,
                             email,
@@ -149,6 +140,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             Toast.makeText(RegisterActivity.this, "completado", Toast.LENGTH_SHORT).show();
                         }
                     });
+                    Intent intent = new Intent(getApplication(), LoginActivity.class);
+                    startActivity(intent);
                 } else{
 
                 }

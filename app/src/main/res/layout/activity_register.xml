@@ -24,7 +24,7 @@
         android:id="@+id/registroNombre_et"
         android:layout_width="243dp"
         android:layout_height="63dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="84dp"
         android:backgroundTint="#BA68C8"
         android:ems="10"
         android:foregroundTint="#BA68C8"
@@ -32,21 +32,7 @@
         android:inputType="textPersonName"
         android:shadowColor="#BA68C8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenUsuarioMenu_img" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-
-        android:id="@+id/imagenUsuarioMenu_img"
-        android:layout_width="66dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="15dp"
-
-        android:src="@drawable/usuario"
-        app:civ_border_color="#FFFFFF"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -91,7 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.118"
         app:strokeColor="#ba68c8" />
 
     <com.google.android.material.button.MaterialButton
