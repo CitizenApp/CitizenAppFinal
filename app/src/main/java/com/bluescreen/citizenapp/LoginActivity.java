@@ -112,11 +112,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     //for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     // Toast.makeText(signinActivity.this, value, Toast.LENGTH_SHORT).show();
                     switch (userType) {
-                        case 1:
+                        case 0:
                             Intent intent = new Intent(getApplication(), InicioActivity.class);
                             startActivity(intent);
                             break;
-                        case 2:
+                        case 1:
                             Intent intent2 = new Intent(getApplication(), Profeactivity.class);
                             startActivity(intent2);
                             break;
