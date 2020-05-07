@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -46,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         passLoginTxt = (EditText) findViewById(R.id.passLogin_et);
         iniciarSesionBtn = (Button) findViewById(R.id.login_btn);
         registrarUserBtn = (Button) findViewById(R.id.registrarse_btn);
-        databaseReference=FirebaseDatabase.getInstance().getReference("prueba");
+        databaseReference=FirebaseDatabase.getInstance().getReference("Personal");
 
         progressDialog = new ProgressDialog(this);
 
@@ -64,7 +67,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             case R.id.login_btn :
               //loginUsuario();
-                login();
+                if(isOnline(getApplicationContext())){
+                    login();
+                }
+                else{
+                    Toast.makeText(LoginActivity.this,"Porfavor, verifica tu conexion a internet",Toast.LENGTH_LONG).show();
+                }
                 break;
             case R.id.registrarse_btn :
                 Intent intent = new Intent(getApplication(), RegisterActivity.class);
@@ -75,9 +83,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+
+    public static boolean isOnline(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
+    }
+
     private void login(){
+
         String email = correoLoginTxt.getText().toString().trim();
         String password = passLoginTxt.getText().toString().trim();
+        if (TextUtils.isEmpty(email)){
+            Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(password)){
+            Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
+            return;
+        }
         progressDialog.setMessage("Iniciando Sesion");
         progressDialog.show();
         firebaseAuth.signInWithEmailAndPassword(email,password)
@@ -103,14 +127,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (user != null) {
             //Toast.makeText(signinActivity.this, user.getUid(), Toast.LENGTH_SHORT).show();
             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-            databaseReference = firebaseDatabase.getReference().child("prueba").child(firebaseAuth.getUid());
+            databaseReference = firebaseDatabase.getReference().child("Personal").child(firebaseAuth.getUid());
             databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                      usuarios usu= dataSnapshot.getValue(usuarios.class);
-                   int userType = (usu.getTipo());
+                   int userType = (usu.getRol());
                     //for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     // Toast.makeText(signinActivity.this, value, Toast.LENGTH_SHORT).show();
+
                     switch (userType) {
                         case 0:
                             Intent intent = new Intent(getApplication(), InicioActivity.class);

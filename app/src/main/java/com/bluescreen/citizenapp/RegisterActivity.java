@@ -8,8 +8,11 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -52,6 +55,7 @@ Switch personal;
     private ProgressDialog progressDialog;
 Spinner cursos;
     String cursoseleccionado="";
+
     int rol;
 
 
@@ -82,6 +86,21 @@ DatabaseReference databaseReference;
         cursos=findViewById(R.id.spinner);
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Personal");
+        personal.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    personal.setText("Profesor");
+                    cursos.setEnabled(false);
+                    rol=1;
+                }else{
+                    personal.setText("Alumno");
+                    cursos.setEnabled(true);
+                    rol=0;
+
+                }
+            }
+        });
 
 
 
@@ -99,7 +118,14 @@ DatabaseReference databaseReference;
             @Override
             public void onClick(View v) {
 
-              Registrarusuario();
+                if(isOnline(getApplicationContext())){
+                    Registrarusuario();
+                }
+                else{
+                    Toast.makeText(RegisterActivity.this,"Porfavor, verifica tu conexion a internet",Toast.LENGTH_LONG).show();
+                }
+
+
 
             }
         });
@@ -107,30 +133,45 @@ DatabaseReference databaseReference;
 
     }
 
+
+    public static boolean isOnline(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
+    }
+
     public void Registrarusuario(){
+
 
         final String nombre2 = nombre.getText().toString();
         final String email = correo.getText().toString().trim();
         final String password = contraseña.getText().toString().trim();
-        cursoseleccionado=cursos.getSelectedItem().toString();
-        cursoseleccionado="";
-        rol=0;
 
-        personal.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-             if(isChecked){
-                 personal.setText("Profesor");
-                 rol=1;
-             }else{
-                 personal.setText("Alumno");
-                 rol=0;
-             }
-            }
-        });
 
-        progressDialog.setMessage("Realizando Registro de Usuarios");
+        if (TextUtils.isEmpty(email)){
+            Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(password)){
+            Toast.makeText(this,"Se debe ingresar una contraseña", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(nombre2)){
+            Toast.makeText(this,"Se debe ingresar un nombre", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        progressDialog.setMessage("Realizando Registro de Usuario");
         progressDialog.show();
+
+
+
+        cursoseleccionado="";
+        cursoseleccionado=cursos.getSelectedItem().toString();
+
+
 
 
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -138,8 +179,9 @@ DatabaseReference databaseReference;
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
-
                     progressDialog.dismiss();
+
+
 
                     usuarios mio = new usuarios(
                             nombre2,
@@ -152,7 +194,9 @@ DatabaseReference databaseReference;
                     FirebaseDatabase.getInstance().getReference("Personal").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(mio).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(RegisterActivity.this, "completado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Completado", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplication(), LoginActivity.class);
+                            startActivity(intent);
 
                         }
                     });

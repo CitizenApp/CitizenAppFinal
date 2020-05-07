@@ -6,7 +6,8 @@ public class usuarios {
 
     String nombre;
     String correo;
-    int tipo;
+    int rol;
+
     String curso;
 
 
@@ -14,12 +15,11 @@ public class usuarios {
 
     }
 
-    public usuarios(String nombre, String correo, int tipo,String curso) {
+    public usuarios(String nombre, String correo, int rol, String curso) {
         this.nombre = nombre;
         this.correo = correo;
-        this.tipo = tipo;
+        this.rol = rol;
         this.curso = curso;
-
     }
 
     public String getNombre() {
@@ -38,12 +38,12 @@ public class usuarios {
         this.correo = correo;
     }
 
-    public int getTipo() {
-        return tipo;
+    public int getRol() {
+        return rol;
     }
 
-    public void setTipo(int tipo) {
-        this.tipo =tipo;
+    public void setRol(int rol) {
+        this.rol = rol;
     }
 
     public String getCurso() {
@@ -51,7 +51,6 @@ public class usuarios {
     }
 
     public void setCurso(String curso) {
-        this.curso =curso;
+        this.curso = curso;
     }
-
 }
