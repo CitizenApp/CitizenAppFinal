@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="329dp"
         android:layout_height="62dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="18dp"
         android:gravity="center"
         android:text="Registro de Usuario"
         android:textColor="#BA68C8"
@@ -38,9 +38,9 @@
     <de.hdodenhof.circleimageview.CircleImageView
 
         android:id="@+id/imagenUsuarioMenu_img"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="15dp"
 
         android:src="@drawable/usuario"
         app:civ_border_color="#FFFFFF"
@@ -54,7 +54,7 @@
         android:id="@+id/emailRegistro_et"
         android:layout_width="243dp"
         android:layout_height="63dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#BA68C8"
         android:ems="10"
         android:foregroundTint="#BA68C8"
@@ -69,7 +69,7 @@
         android:id="@+id/passRegistro_et"
         android:layout_width="243dp"
         android:layout_height="63dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#BA68C8"
         android:ems="10"
         android:foregroundTint="#BA68C8"
@@ -83,30 +83,53 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login_btn"
         style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="255dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
         android:text="Registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passRegistro_et"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintVertical_bias="0.0"
         app:strokeColor="#ba68c8" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loguearse_btn"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="349dp"
+        android:layout_height="39dp"
         android:layout_marginBottom="32dp"
         android:text="¿Ya tienes Cuenta? Iniciar Sesión"
         android:textColor="#BA68C8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.966"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_btn"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Alumno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="256dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:entries="@array/Cursos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passRegistro_et" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

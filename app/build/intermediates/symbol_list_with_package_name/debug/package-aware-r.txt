@@ -56,6 +56,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array Cursos
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1636,6 +1637,7 @@ id adjust_width
 id agenda
 id alertTitle
 id all
+id alumnos
 id always
 id artes
 id async
@@ -1676,6 +1678,7 @@ id contenido_noticiasHome2
 id content
 id contentPanel
 id coordinator
+id correo
 id custom
 id customPanel
 id cut
@@ -1816,6 +1819,7 @@ id navigation_header_container
 id never
 id noScroll
 id no_fill_large_indicator
+id nombre
 id nombreUsuarioMenu
 id none
 id normal
@@ -1832,18 +1836,21 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id pass
 id passLogin_et
 id passRegistro_et
 id password_toggle
 id peekHeight
 id percent
 id pin
+id profesor
 id progress_circular
 id progress_horizontal
 id publcarNoticia_btn
 id radio
 id recycle_newsHome
 id registrarse_btn
+id registro
 id registroNombre_et
 id right
 id right_icon
@@ -1883,6 +1890,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner
 id spinner_justificacion
 id split_action_bar
 id spread
@@ -1894,8 +1902,10 @@ id standard
 id start
 id status_bar_latest_event_content
 id stretch
+id subir
 id submenuarrow
 id submit_area
+id switch1
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1917,8 +1927,10 @@ id textView
 id textView10
 id textView11
 id textView12
+id textView13
 id textView2
 id textView3
+id textView4
 id textView5
 id textView6
 id textView7
@@ -2035,7 +2047,9 @@ layout abc_tooltip
 layout activity_inicio
 layout activity_login
 layout activity_main
+layout activity_profeactivity
 layout activity_register
+layout activity_registerprueba
 layout app_bar_inicio
 layout content_inicio
 layout crear_noticia_home_fragment

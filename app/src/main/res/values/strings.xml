@@ -23,4 +23,14 @@
     <string name="title_activity_desafios_tabbed_fragment">desafiosTabbedFragment</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string-array name="Cursos">
+        <item>Seleccione un curso</item>
+        <item>2-A</item>
+        <item>3-A</item>
+        <item>4-A</item>
+        <item>5-A</item>
+        <item>6-A</item>
+        <item>7-A</item>
+        <item>GO</item>
+    </string-array>
 </resources>

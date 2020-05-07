@@ -12,10 +12,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.bluescreen.citizenapp.Profe.Profeactivity;
+import com.bluescreen.citizenapp.Profe.Registerprueba;
+import com.bluescreen.citizenapp.Profe.usuarios;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,6 +33,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button iniciarSesionBtn, registrarUserBtn;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +46,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         passLoginTxt = (EditText) findViewById(R.id.passLogin_et);
         iniciarSesionBtn = (Button) findViewById(R.id.login_btn);
         registrarUserBtn = (Button) findViewById(R.id.registrarse_btn);
+        databaseReference=FirebaseDatabase.getInstance().getReference("prueba");
 
         progressDialog = new ProgressDialog(this);
 
         iniciarSesionBtn.setOnClickListener(this);
         registrarUserBtn.setOnClickListener(this);
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
         correoLoginTxt.setText(AtributosGlobales.capturarEmail);
         passLoginTxt.setText(AtributosGlobales.capturarPass);
@@ -50,21 +63,82 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()){
 
             case R.id.login_btn :
-              loginUsuario();
+              //loginUsuario();
+                login();
                 break;
             case R.id.registrarse_btn :
                 Intent intent = new Intent(getApplication(), RegisterActivity.class);
                 startActivity(intent);
+
                 break;
         }
 
+    }
+
+    private void login(){
+        String email = correoLoginTxt.getText().toString().trim();
+        String password = passLoginTxt.getText().toString().trim();
+        progressDialog.setMessage("Iniciando Sesion");
+        progressDialog.show();
+        firebaseAuth.signInWithEmailAndPassword(email,password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            progressDialog.dismiss();
+                            onAuthSuccess(task.getResult().getUser());
+                            //Toast.makeText(signinActivity.this, "Successfully Signed In", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+
+                        }
+                    }
+                });
+
+    }
+
+    private void onAuthSuccess(FirebaseUser user) {
+
+        //String username = usernameFromEmail(user.getEmail())
+        if (user != null) {
+            //Toast.makeText(signinActivity.this, user.getUid(), Toast.LENGTH_SHORT).show();
+            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            databaseReference = firebaseDatabase.getReference().child("prueba").child(firebaseAuth.getUid());
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                     usuarios usu= dataSnapshot.getValue(usuarios.class);
+                   int userType = (usu.getTipo());
+                    //for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    // Toast.makeText(signinActivity.this, value, Toast.LENGTH_SHORT).show();
+                    switch (userType) {
+                        case 1:
+                            Intent intent = new Intent(getApplication(), InicioActivity.class);
+                            startActivity(intent);
+                            break;
+                        case 2:
+                            Intent intent2 = new Intent(getApplication(), Profeactivity.class);
+                            startActivity(intent2);
+                            break;
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }
     }
 
     private void loginUsuario(){
 
         final String email = correoLoginTxt.getText().toString().trim();
         final String  pass = passLoginTxt.getText().toString().trim();
+        final String correoprofe="profeprueba@gmail.cl";
+        final String contraseñaprofe="123456";
         AtributosGlobales.capturarEmail = email;
+
 
         if (TextUtils.isEmpty(email)){
             Toast.makeText(this,"Debe ingresar un email", Toast.LENGTH_LONG).show();
@@ -76,13 +150,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
-
         progressDialog.setMessage("Iniciando Sesion");
         progressDialog.show();
         //Login firebase
         firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
                 if (task.isSuccessful()){
                     progressDialog.dismiss();
 

@@ -15,11 +15,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 
+import com.bluescreen.citizenapp.Profe.Registerprueba;
+import com.bluescreen.citizenapp.Profe.usuarios;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -48,6 +54,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private int requestCode = 1;
     private ProgressDialog progressDialog;
 
+    int rol=3;
+    String cursoseleccionado="";
+
+    Switch swtich;
+
+    Spinner cursos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +75,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         irloginBtn = (Button) findViewById(R.id.loguearse_btn);
         progressDialog = new ProgressDialog(this);
         imageRegistro = (ImageView) findViewById(R.id.imagenUsuarioMenu_img);
+        swtich=findViewById(R.id.switch1);
+        cursos=findViewById(R.id.spinner);
+
         databaseReference = FirebaseDatabase.getInstance().getReference();
         imageRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,12 +99,61 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.login_btn:
-                registroUsuario();
+                //registroUsuario();
+                Registrarusuario();
                 break;
             case R.id.loguearse_btn :
                 Intent intent = new Intent(getApplication(), LoginActivity.class);
                 startActivity(intent);
         }
+    }
+
+    private  void Registrarusuario(){
+        cursoseleccionado="";
+        rol =3;
+        final String nombre2 = usernameText.getText().toString();
+        final String email = emailText.getText().toString().trim();
+        String password = passwordText.getText().toString().trim();
+        swtich.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    swtich.setText("Profesor");
+                    rol=2;
+                } else {
+                    swtich.setText("Alumno");
+                    rol=1;
+                }
+            }
+        });
+
+       cursoseleccionado=cursos.getSelectedItem().toString();
+
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (!task.isSuccessful()) {
+                    usuarios mio = new usuarios(
+                            nombre2,
+                            email,
+                            rol,
+                            cursoseleccionado
+
+                    );
+
+
+                    FirebaseDatabase.getInstance().getReference("prueba")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(mio).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(RegisterActivity.this, "completado", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else{
+
+                }
+            }
+        });
     }
 
     private void registroUsuario(){

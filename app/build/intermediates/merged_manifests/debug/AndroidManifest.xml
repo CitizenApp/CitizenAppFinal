@@ -29,6 +29,8 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.bluescreen.citizenapp.Profe.Registerprueba" />
+        <activity android:name="com.bluescreen.citizenapp.Profe.Profeactivity" />
         <activity
             android:name="com.bluescreen.citizenapp.ui.desafiosTabbedFragment"
             android:label="@string/title_activity_desafios_tabbed_fragment"

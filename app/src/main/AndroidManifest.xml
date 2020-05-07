@@ -13,15 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Profe.Registerprueba"></activity>
+        <activity android:name=".Profe.Profeactivity" />
         <activity
             android:name=".ui.desafiosTabbedFragment"
             android:label="@string/title_activity_desafios_tabbed_fragment"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InicioActivity"
             android:label="@string/title_activity_inicio"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
