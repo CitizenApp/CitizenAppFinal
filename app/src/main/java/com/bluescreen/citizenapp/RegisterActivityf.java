@@ -24,9 +24,11 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.bluescreen.citizenapp.LoginActivity;
 import com.bluescreen.citizenapp.Profe.Profeactivity;
 import com.bluescreen.citizenapp.Profe.Registerprueba;
 import com.bluescreen.citizenapp.Profe.usuarios;
+import com.bluescreen.citizenapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -44,13 +46,12 @@ import com.google.firebase.storage.UploadTask;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivityf extends AppCompatActivity {
 
-Button loginbtn,loguearsebtn;
-EditText nombre,correo,contraseña;
-Switch personal;
-    private ProgressDialog progressDialog;
-Spinner cursos;
+    Button loginbtn,loguearsebtn;
+    EditText nombre,correo,contraseña;
+    Switch personal;
+    Spinner cursos;
     String cursoseleccionado="";
     int rol;
 
@@ -60,9 +61,9 @@ Spinner cursos;
 
 
 
-private FirebaseAuth firebaseAuth;
+    private FirebaseAuth firebaseAuth;
 
-DatabaseReference databaseReference;
+    DatabaseReference databaseReference;
 
 
     @Override
@@ -77,8 +78,6 @@ DatabaseReference databaseReference;
         correo=findViewById(R.id.emailRegistro_et);
         contraseña=findViewById(R.id.passRegistro_et);
         personal=findViewById(R.id.switch1);
-
-        progressDialog = new ProgressDialog(this);
         cursos=findViewById(R.id.spinner);
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Personal");
@@ -99,7 +98,7 @@ DatabaseReference databaseReference;
             @Override
             public void onClick(View v) {
 
-              Registrarusuario();
+                Registrarusuario();
 
             }
         });
@@ -119,28 +118,21 @@ DatabaseReference databaseReference;
         personal.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-             if(isChecked){
-                 personal.setText("Profesor");
-                 rol=1;
-             }else{
-                 personal.setText("Alumno");
-                 rol=0;
-             }
+                if(isChecked){
+                    personal.setText("Profesor");
+                    rol=1;
+                }else{
+                    personal.setText("Alumno");
+                    rol=0;
+                }
             }
         });
-
-        progressDialog.setMessage("Realizando Registro de Usuarios");
-        progressDialog.show();
-
 
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
-
-                    progressDialog.dismiss();
-
                     usuarios mio = new usuarios(
                             nombre2,
                             email,
@@ -152,7 +144,7 @@ DatabaseReference databaseReference;
                     FirebaseDatabase.getInstance().getReference("Personal").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(mio).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(RegisterActivity.this, "completado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivityf.this, "completado", Toast.LENGTH_SHORT).show();
 
                         }
                     });
