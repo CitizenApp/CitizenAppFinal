@@ -33,4 +33,6 @@
         <item>7-A</item>
         <item>GO</item>
     </string-array>
+    <string name="title_activity_profe_inicio">ProfeInicioActivity</string>
+    <string name="title_activity_admin_inicio">AdminInicioActivity</string>
 </resources>

@@ -30,6 +30,14 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.bluescreen.citizenapp.AdminInicioActivity"
+            android:label="@string/title_activity_admin_inicio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.bluescreen.citizenapp.ProfeInicioActivity"
+            android:label="@string/title_activity_profe_inicio"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.bluescreen.citizenapp.Profe.Registerprueba" />
         <activity android:name="com.bluescreen.citizenapp.Profe.Profeactivity" />
         <activity
