@@ -52,16 +52,16 @@
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_bg_topheader.png"
     },
     {
-        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_art.png.flat",
-        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\art.png"
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_bg_topheader.png.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_bg_topheader.png"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profe_inicio.xml.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\activity_profe_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_bg_topheader.png.flat",
-        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_bg_topheader.png"
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_art.png.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\art.png"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pase.png.flat",
@@ -136,12 +136,12 @@
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\content_admin_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_documentos.xml.flat",
-        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\fragment_documentos.xml"
-    },
-    {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_file_download_black_24dp.xml.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\ic_file_download_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_documentos.xml.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\fragment_documentos.xml"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_bg_topheader.png.flat",
@@ -172,12 +172,12 @@
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\historia.png"
     },
     {
-        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_inspectoria.xml.flat",
-        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\fragment_inspectoria.xml"
-    },
-    {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_profe_inicio.xml.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\app_bar_profe_inicio.xml"
+    },
+    {
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_inspectoria.xml.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\fragment_inspectoria.xml"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -392,20 +392,20 @@
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\diverso.png"
     },
     {
-        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon.png.flat",
-        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\icon.png"
-    },
-    {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_admin_inicio.xml.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\nav_header_admin_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_fragmentaula.xml.flat",
-        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\fragment_fragmentaula.xml"
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon.png.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\icon.png"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_cursos_profe.xml.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\fragment_cursos_profe.xml"
+    },
+    {
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_fragmentaula.xml.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\fragment_fragmentaula.xml"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_slideshow.xml.flat",
