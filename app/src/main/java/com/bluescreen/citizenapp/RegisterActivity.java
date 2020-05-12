@@ -33,13 +33,18 @@ import com.bluescreen.citizenapp.Profe.usuarios;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseError;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -128,6 +133,7 @@ DatabaseReference databaseReference;
 
 
             }
+
         });
 
 
@@ -139,6 +145,42 @@ DatabaseReference databaseReference;
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
     }
+
+
+
+
+    //standby
+
+    public void verficarprofe(){
+
+    }
+
+    public void verificaralumno(){
+        final String nombrealumno =nombre.getText().toString();
+        DatabaseReference mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        Query query = mFirebaseDatabaseReference.child("Alumnos");
+
+        mFirebaseDatabaseReference.child("Alumnos").orderByChild("correoelectronico").equalTo(nombrealumno).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot!=null && dataSnapshot.getChildren()!=null &&
+                        dataSnapshot.getChildren().iterator().hasNext()){
+                    Toast.makeText(getApplicationContext(),"existe",Toast.LENGTH_SHORT);
+                }else {
+                    //Username does not exist
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+    }
+
+
 
     public void Registrarusuario(){
 

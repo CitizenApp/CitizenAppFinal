@@ -35,4 +35,5 @@
     </string-array>
     <string name="title_activity_profe_inicio">ProfeInicioActivity</string>
     <string name="title_activity_admin_inicio">AdminInicioActivity</string>
+    <string name="title_activity_administrador_principal">AdministradorPrincipal</string>
 </resources>

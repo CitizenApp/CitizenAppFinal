@@ -30,8 +30,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.bluescreen.citizenapp.AdminInicioActivity"
-            android:label="@string/title_activity_admin_inicio"
+            android:name="com.bluescreen.citizenapp.Administrador.AdministradorPrincipal"
+            android:label="@string/title_activity_administrador_principal"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.bluescreen.citizenapp.ProfeInicioActivity"

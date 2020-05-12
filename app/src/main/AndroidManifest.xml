@@ -14,8 +14,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".AdminInicioActivity"
-            android:label="@string/title_activity_admin_inicio"
+            android:name=".Administrador.AdministradorPrincipal"
+            android:label="@string/title_activity_administrador_principal"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ProfeInicioActivity"

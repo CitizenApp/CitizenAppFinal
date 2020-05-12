@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.bluescreen.citizenapp.Administrador.AdministradorPrincipal;
 import com.bluescreen.citizenapp.Profe.Profeactivity;
 import com.bluescreen.citizenapp.Profe.Registerprueba;
 import com.bluescreen.citizenapp.Profe.usuarios;
@@ -48,13 +49,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         correoLoginTxt = (EditText) findViewById(R.id.emailLogin_et);
         passLoginTxt = (EditText) findViewById(R.id.passLogin_et);
         iniciarSesionBtn = (Button) findViewById(R.id.login_btn);
-        registrarUserBtn = (Button) findViewById(R.id.registrarse_btn);
+
         databaseReference=FirebaseDatabase.getInstance().getReference("Personal");
 
         progressDialog = new ProgressDialog(this);
 
         iniciarSesionBtn.setOnClickListener(this);
-        registrarUserBtn.setOnClickListener(this);
+
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
         correoLoginTxt.setText(AtributosGlobales.capturarEmail);
@@ -73,11 +74,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 else{
                     Toast.makeText(LoginActivity.this,"Porfavor, verifica tu conexion a internet",Toast.LENGTH_LONG).show();
                 }
-                break;
-            case R.id.registrarse_btn :
-                Intent intent = new Intent(getApplication(), RegisterActivity.class);
-                startActivity(intent);
-
                 break;
         }
 
@@ -146,7 +142,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             startActivity(intent2);
                             break;
                         case 2:
-                            Intent intent3 = new Intent(getApplication(), AdminInicioActivity.class);
+                            Intent intent3 = new Intent(getApplication(), AdministradorPrincipal.class);
                             startActivity(intent3);
                             break;
                     }

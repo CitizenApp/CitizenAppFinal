@@ -1496,6 +1496,7 @@ drawable his
 drawable historia
 drawable historiabg
 drawable ic_access_time_black_24dp
+drawable ic_account_circle_black_24dp
 drawable ic_announcement_black_24dp
 drawable ic_attendance_recap
 drawable ic_bg_topheader
@@ -1636,6 +1637,8 @@ id add
 id adjust_height
 id adjust_width
 id agenda
+id agregar_btn
+id agregarprofe_btn
 id alertTitle
 id all
 id alumnos
@@ -1706,6 +1709,8 @@ id editText4
 id edit_query
 id emailLogin_et
 id emailRegistro_et
+id emailRegistroalumno_et
+id emailRegistroprofe_et
 id emailUsuarioMenu
 id end
 id end_padder
@@ -1807,6 +1812,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id nav_Inspectoria
+id nav_agregaralumnos
+id nav_agregarprofesores
 id nav_campus
 id nav_cerrarSesion
 id nav_controller_view_tag
@@ -1825,6 +1832,8 @@ id noScroll
 id no_fill_large_indicator
 id nombre
 id nombreUsuarioMenu
+id nombrealumno
+id nombreprofe
 id none
 id normal
 id notification_background
@@ -1853,13 +1862,14 @@ id progress_horizontal
 id publcarNoticia_btn
 id radio
 id recycle_newsHome
-id registrarse_btn
 id registro
 id registroNombre_et
 id right
 id right_icon
 id right_side
 id rounded
+id rutalumno_et
+id rutprofe_et
 id save_non_transition_alpha
 id save_overlay_view
 id scale
@@ -2048,7 +2058,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_admin_inicio
+layout activity_administrador_principal
 layout activity_inicio
 layout activity_login
 layout activity_main
@@ -2056,10 +2066,10 @@ layout activity_profe_inicio
 layout activity_profeactivity
 layout activity_register
 layout activity_registerprueba
-layout app_bar_admin_inicio
+layout app_bar_administrador_principal
 layout app_bar_inicio
 layout app_bar_profe_inicio
-layout content_admin_inicio
+layout content_administrador_principal
 layout content_inicio
 layout content_profe_inicio
 layout crear_noticia_home_fragment
@@ -2079,6 +2089,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_admin_agregar_alumnos
+layout fragment_admin_agregar_profesores
 layout fragment_agenda
 layout fragment_agenda_ciudadana
 layout fragment_asistencia_inspectoria
@@ -2132,7 +2144,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
-layout nav_header_admin_inicio
+layout nav_header_administrador_principal
 layout nav_header_inicio
 layout nav_header_profe_inicio
 layout notification_action
@@ -2167,10 +2179,10 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-menu activity_admin_inicio_drawer
+menu activity_administrador_principal_drawer
 menu activity_inicio_drawer
 menu activity_profe_inicio_drawer
-menu admin_inicio
+menu administrador_principal
 menu inicio
 menu profe_inicio
 mipmap ic_launcher
@@ -2302,6 +2314,7 @@ string status_bar_notification_info_overflow
 string tab_text_1
 string tab_text_2
 string title_activity_admin_inicio
+string title_activity_administrador_principal
 string title_activity_desafios_tabbed_fragment
 string title_activity_inicio
 string title_activity_profe_inicio

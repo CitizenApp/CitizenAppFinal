@@ -37,10 +37,22 @@
         android:name="com.bluescreen.citizenapp.ui.InspectoriaFragment"
         android:label="Inspectoria"
         tools:layout="@layout/fragment_inspectoria" />
+
     <fragment
         android:id="@+id/nav_direccion"
         android:name="com.bluescreen.citizenapp.ui.FragmentDireccion"
         android:label="Direccion e Informaciones"
         tools:layout="@layout/fragment_direccion" />
+
+    <fragment
+        android:id="@+id/nav_agregarprofesores"
+        android:name="com.bluescreen.citizenapp.Administrador.ui.gallery.GalleryFragment"
+        android:label="Agregar Profesores"
+        tools:layout="@layout/fragment_admin_agregar_profesores" />
+    <fragment
+        android:id="@+id/nav_agregaralumnos"
+        android:name="com.bluescreen.citizenapp.Administrador.ui.slideshow.SlideshowFragment"
+        android:label="Agregar Alumnos"
+        tools:layout="@layout/fragment_admin_agregar_alumnos" />
 
 </navigation>

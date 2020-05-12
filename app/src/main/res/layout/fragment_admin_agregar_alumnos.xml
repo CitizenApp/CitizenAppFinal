@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Administrador.ui.slideshow.SlideshowFragment"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="329dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="Agregar Alumnos"
+        android:textColor="#2196F3"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nombrealumno"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Nombre de Alumno"
+        android:inputType="textPersonName"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/emailRegistroalumno_et"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Correo Electronico"
+        android:inputType="textEmailAddress"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombrealumno" />
+
+    <EditText
+        android:id="@+id/rutalumno_et"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Rut"
+        android:inputType="text"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegistroalumno_et" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/agregar_btn"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="112dp"
+        android:text="Agregar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rutprofe_et"
+        app:strokeColor="#ba68c8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
