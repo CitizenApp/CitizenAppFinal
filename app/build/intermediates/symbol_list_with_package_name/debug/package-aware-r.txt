@@ -1651,6 +1651,8 @@ id beginning
 id bg_top_header
 id blocking
 id bottom
+id btnSelectArchivoProfe
+id btnUploadArchivoProfe
 id btn_justificacion
 id buttonPanel
 id buzon
@@ -1825,6 +1827,7 @@ id nav_host_fragment
 id nav_host_fragment_container
 id nav_publicarNoticia
 id nav_slideshow
+id nav_subirArchivos
 id nav_view
 id navigation_header_container
 id never
@@ -1942,6 +1945,7 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView14
 id textView2
 id textView3
 id textView4
@@ -1981,6 +1985,7 @@ id transition_transform
 id turno
 id txtDescripcionNoticia
 id txtFechaNoticia
+id txtNotificationFile
 id txtTituloNoticia
 id unchecked
 id uniform
@@ -2114,6 +2119,7 @@ layout fragment_mi_colegio
 layout fragment_organigrama
 layout fragment_pases_acceso
 layout fragment_slideshow
+layout fragment_subir_archivo
 layout fragment_turnos
 layout list_item_cursoprofe
 layout mtrl_alert_dialog
