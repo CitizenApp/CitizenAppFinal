@@ -48,40 +48,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
-
 Button loginbtn,loguearsebtn;
 EditText nombre,correo,contraseña;
 Switch personal;
     private ProgressDialog progressDialog;
 Spinner cursos;
     String cursoseleccionado="";
-
     int rol;
-
-
-
-
-
-
-
 private FirebaseAuth firebaseAuth;
-
 DatabaseReference databaseReference;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-
         loginbtn=findViewById(R.id.login_btn);
         loguearsebtn=findViewById(R.id.loguearse_btn);
         nombre=findViewById(R.id.registroNombre_et);
         correo=findViewById(R.id.emailRegistro_et);
         contraseña=findViewById(R.id.passRegistro_et);
         personal=findViewById(R.id.switch1);
-
         progressDialog = new ProgressDialog(this);
         cursos=findViewById(R.id.spinner);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -97,14 +82,9 @@ DatabaseReference databaseReference;
                     personal.setText("Alumno");
                     cursos.setEnabled(true);
                     rol=0;
-
                 }
             }
         });
-
-
-
-
         loguearsebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,8 +92,6 @@ DatabaseReference databaseReference;
                 startActivity(intent2);
             }
         });
-
-
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,96 +102,56 @@ DatabaseReference databaseReference;
                 else{
                     Toast.makeText(RegisterActivity.this,"Porfavor, verifica tu conexion a internet",Toast.LENGTH_LONG).show();
                 }
-
-
-
             }
         });
-
-
     }
-
-
     public static boolean isOnline(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
     }
-
     public void Registrarusuario(){
-
-
         final String nombre2 = nombre.getText().toString();
         final String email = correo.getText().toString().trim();
         final String password = contraseña.getText().toString().trim();
-
-
         if (TextUtils.isEmpty(email)){
             Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
             return;
         }
-
         if (TextUtils.isEmpty(password)){
             Toast.makeText(this,"Se debe ingresar una contraseña", Toast.LENGTH_LONG).show();
             return;
         }
-
         if (TextUtils.isEmpty(nombre2)){
             Toast.makeText(this,"Se debe ingresar un nombre", Toast.LENGTH_LONG).show();
             return;
         }
-
         progressDialog.setMessage("Realizando Registro de Usuario");
         progressDialog.show();
-
-
-
         cursoseleccionado="";
         cursoseleccionado=cursos.getSelectedItem().toString();
-
-
-
-
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
-
-
-
                     usuarios mio = new usuarios(
                             nombre2,
                             email,
                             rol,
                             cursoseleccionado
-
                     );
-
                     FirebaseDatabase.getInstance().getReference("Personal").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(mio).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(RegisterActivity.this, "Completado", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplication(), LoginActivity.class);
                             startActivity(intent);
-
                         }
                     });
-
                 }
-
             }
         });
-
-
-
-
-
     }
-
-
-
-
-
 }
