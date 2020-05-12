@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
+            "outputFile": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ale\\.gradle\\caches\\transforms-2\\files-2.1\\6029c1862846be4a7ec1743d4d20ec64\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\RonDrugs\\.gradle\\caches\\transforms-2\\files-2.1\\6029c1862846be4a7ec1743d4d20ec64\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
