@@ -32,20 +32,20 @@
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\ic_announcement_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_inicio.xml.flat",
-        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\nav_header_inicio.xml"
-    },
-    {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lenguajebg.xml.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\lenguajebg.xml"
     },
     {
-        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_artesbg.xml.flat",
-        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\artesbg.xml"
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_inicio.xml.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\nav_header_inicio.xml"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_artesbg.xml.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\artesbg.xml"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_bg_topheader.png.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_historiabg.xml.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\drawable\\historiabg.xml"
+    },
+    {
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_chat_alumnos.xml.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\fragment_chat_alumnos.xml"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
@@ -366,6 +370,10 @@
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_cardview_mensajes_chat_alumnos.xml.flat",
+        "source": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\src\\main\\res\\layout\\cardview_mensajes_chat_alumnos.xml"
     },
     {
         "merged": "C:\\Users\\RonDrugs\\Documents\\CitizenAppFinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
