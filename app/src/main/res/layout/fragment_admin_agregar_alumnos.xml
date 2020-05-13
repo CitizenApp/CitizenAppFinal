@@ -51,10 +51,25 @@
         app:layout_constraintTop_toBottomOf="@+id/nombrealumno" />
 
     <EditText
-        android:id="@+id/rutalumno_et"
+        android:id="@+id/contraseña_et"
         android:layout_width="243dp"
         android:layout_height="63dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Contraseña"
+        android:inputType="text"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegistroalumno_et" />
+
+    <EditText
+        android:id="@+id/rut_et"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#BA68C8"
         android:ems="10"
         android:foregroundTint="#BA68C8"
@@ -63,7 +78,7 @@
         android:shadowColor="#BA68C8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailRegistroalumno_et" />
+        app:layout_constraintTop_toBottomOf="@+id/contraseña_et" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/agregar_btn"

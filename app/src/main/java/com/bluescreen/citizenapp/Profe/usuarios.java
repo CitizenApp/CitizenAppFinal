@@ -7,19 +7,18 @@ public class usuarios {
     String nombre;
     String correo;
     int rol;
-
-    String curso;
+    String rut;
 
 
     public usuarios() {
 
     }
 
-    public usuarios(String nombre, String correo, int rol, String curso) {
+    public usuarios(String nombre, String correo, int rol, String rut) {
         this.nombre = nombre;
         this.correo = correo;
         this.rol = rol;
-        this.curso = curso;
+        this.rut = rut;
     }
 
     public String getNombre() {
@@ -46,11 +45,11 @@ public class usuarios {
         this.rol = rol;
     }
 
-    public String getCurso() {
-        return curso;
+    public String getRut() {
+        return rut;
     }
 
-    public void setCurso(String curso) {
-        this.curso = curso;
+    public void setRut(String rut) {
+        this.rut = rut;
     }
 }

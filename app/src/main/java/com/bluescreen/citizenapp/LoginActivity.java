@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText correoLoginTxt, passLoginTxt;
     private Button iniciarSesionBtn, registrarUserBtn;
     private FirebaseAuth firebaseAuth;
+    Button registro;
     private ProgressDialog progressDialog;
     DatabaseReference databaseReference;
 
@@ -49,12 +50,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         correoLoginTxt = (EditText) findViewById(R.id.emailLogin_et);
         passLoginTxt = (EditText) findViewById(R.id.passLogin_et);
         iniciarSesionBtn = (Button) findViewById(R.id.login_btn);
+        registro=(Button)findViewById(R.id.regitrobtn);
 
         databaseReference=FirebaseDatabase.getInstance().getReference("Personal");
 
         progressDialog = new ProgressDialog(this);
 
+
         iniciarSesionBtn.setOnClickListener(this);
+        registro.setOnClickListener(this);
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -75,6 +79,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(LoginActivity.this,"Porfavor, verifica tu conexion a internet",Toast.LENGTH_LONG).show();
                 }
                 break;
+
+            case R.id.regitrobtn:
+                Intent intent2 = new Intent(getApplication(), RegisterActivity.class);
+                startActivity(intent2);
+                break;
+
         }
 
     }
@@ -128,7 +138,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                      usuarios usu= dataSnapshot.getValue(usuarios.class);
-                   int userType = (usu.getRol());
+                     int userType = (usu.getRol());
                     //for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     // Toast.makeText(signinActivity.this, value, Toast.LENGTH_SHORT).show();
 

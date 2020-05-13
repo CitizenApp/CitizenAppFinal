@@ -16,5 +16,20 @@
             android:id="@+id/nav_agregaralumnos"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Agregar Alumnos" />
+
+        <item
+            android:id="@+id/nav_agregaracursos"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Agregar Cursos" />
+
+        <item
+            android:id="@+id/nav_agregarmaterias"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Agregar Materias" />
+
+        <item
+            android:id="@+id/nav_asignarmaterias"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Asignar Materias a alumnos" />
     </group>
 </menu>

@@ -16,7 +16,13 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.bluescreen.citizenapp.Administrador.AlumnoModel;
+import com.bluescreen.citizenapp.Profe.usuarios;
 import com.bluescreen.citizenapp.R;
+import com.bluescreen.citizenapp.RegisterActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,9 +30,13 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SlideshowFragment extends Fragment {
 
     private SlideshowViewModel slideshowViewModel;
-    EditText nombrealumno,correo,rut;
+    EditText nombrealumno,correo,contraseña,rut;
     Button agregar;
-    AlumnoModel alumnoModel;
+    private FirebaseAuth firebaseAuth;
+
+    usuarios usuarios;
+    int rol=0;
+
 
     DatabaseReference databaseReference;
 
@@ -43,23 +53,49 @@ public class SlideshowFragment extends Fragment {
         super.onStart();
         nombrealumno=getView().findViewById(R.id.nombrealumno);
         correo=getView().findViewById(R.id.emailRegistroalumno_et);
-        rut=getView().findViewById(R.id.rutalumno_et);
+        contraseña=getView().findViewById(R.id.contraseña_et);
+        rut=getView().findViewById(R.id.rut_et);
         agregar=getView().findViewById(R.id.agregar_btn);
-        alumnoModel=new AlumnoModel();
-        databaseReference= FirebaseDatabase.getInstance().getReference().child("Personal").child("Alumnos");
-
+        usuarios=new usuarios();
+        firebaseAuth = FirebaseAuth.getInstance();
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                alumnoModel.setNombre(nombrealumno.getText().toString().trim());
-                alumnoModel.setCorreoelectronico(correo.getText().toString().trim());
-                alumnoModel.setRut(rut.getText().toString().trim());
+                final String nombre2 = nombrealumno.getText().toString();
+                final String email = correo.getText().toString().trim();
+                final String password = contraseña.getText().toString().trim();
+                final String rutt = rut.getText().toString().trim();
 
-                databaseReference.push().setValue(alumnoModel);
-                Toast.makeText(getContext(),"agrado correctamente",Toast.LENGTH_SHORT).show();
+
+
+                firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(getActivity(),new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+
+                            usuarios u=new usuarios(
+                                    nombre2,email,rol,rutt
+                            );
+
+                            FirebaseDatabase.getInstance().getReference("Personal").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(u).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Toast.makeText(getContext(), "Completado", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                        }
+                    }
+                });
 
             }
         });
+
+
+
+
+
+
     }
 }

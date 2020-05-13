@@ -7,8 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.bluescreen.citizenapp.Administrador.CursoModel;
+import com.bluescreen.citizenapp.Administrador.ProfesorModel;
 import com.bluescreen.citizenapp.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,9 +27,14 @@ public class Adminagregarcursos extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    EditText curso;
+    Button agregarcurso;
+    CursoModel cursoModel;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    DatabaseReference databaseReference;
 
     public Adminagregarcursos() {
         // Required empty public constructor
@@ -63,5 +74,23 @@ public class Adminagregarcursos extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_adminagregarcursos, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        curso=getView().findViewById(R.id.cursoet);
+        agregarcurso=getView().findViewById(R.id.agregarcurso);
+        cursoModel=new CursoModel();
+        databaseReference= FirebaseDatabase.getInstance().getReference().child("Cursos");
+
+        agregarcurso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cursoModel.setNombre(curso.getText().toString().trim());
+                databaseReference.push().setValue(cursoModel);
+            }
+        });
     }
 }
