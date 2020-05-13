@@ -1638,6 +1638,9 @@ id adjust_height
 id adjust_width
 id agenda
 id agregar_btn
+id agregarasignacion
+id agregarcurso
+id agregarmateria
 id agregarprofe_btn
 id alertTitle
 id all
@@ -1683,8 +1686,10 @@ id container
 id contenido_noticiasHome2
 id content
 id contentPanel
+id contraseña_et
 id coordinator
 id correo
+id cursoet
 id custom
 id customPanel
 id cut
@@ -1757,6 +1762,8 @@ id icono2
 id icono3
 id icono4
 id icono5
+id id
+id id2
 id ifRoom
 id image
 id imageVIew
@@ -1784,6 +1791,7 @@ id login_btn
 id logo_iv
 id loguearse_btn
 id masked
+id materia
 id media_actions
 id mensajeCardviewChatAlumnosTv
 id mensajesChatAlumnosRv
@@ -1821,8 +1829,11 @@ id mtrl_picker_title_text
 id multiply
 id nav_Chat
 id nav_Inspectoria
+id nav_agregaracursos
 id nav_agregaralumnos
+id nav_agregarmaterias
 id nav_agregarprofesores
+id nav_asignarmaterias
 id nav_campus
 id nav_cerrarSesion
 id nav_chat_admin
@@ -1876,11 +1887,12 @@ id radio
 id recycle_newsHome
 id registro
 id registroNombre_et
+id regitrobtn
 id right
 id right_icon
 id right_side
 id rounded
-id rutalumno_et
+id rut_et
 id rutprofe_et
 id save_non_transition_alpha
 id save_overlay_view
@@ -1918,6 +1930,8 @@ id snapMargins
 id spacer
 id spinner
 id spinner_justificacion
+id spinneralumno
+id spinnermateria
 id split_action_bar
 id spread
 id spread_inside
@@ -1955,6 +1969,9 @@ id textView11
 id textView12
 id textView13
 id textView14
+id textView15
+id textView16
+id textView17
 id textView2
 id textView3
 id textView4
@@ -1999,6 +2016,7 @@ id txtTituloNoticia
 id unchecked
 id uniform
 id unlabeled
+id uno
 id up
 id useLogo
 id user_photo
@@ -2107,6 +2125,8 @@ layout design_text_input_start_icon
 layout fragment_admin_agregar_alumnos
 layout fragment_admin_agregar_profesores
 layout fragment_adminagregarcursos
+layout fragment_adminagregarmaterias
+layout fragment_adminasignarmateriasalumnos
 layout fragment_agenda
 layout fragment_agenda_ciudadana
 layout fragment_asistencia_inspectoria

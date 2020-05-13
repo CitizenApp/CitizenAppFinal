@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emailLogin_et" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/loguearse_btn"
+        android:id="@+id/regitrobtn"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

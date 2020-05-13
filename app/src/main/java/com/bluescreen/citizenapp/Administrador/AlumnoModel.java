@@ -2,16 +2,19 @@ package com.bluescreen.citizenapp.Administrador;
 
 public class AlumnoModel {
 
-    private String nombre,correoelectronico,rut;
+    private String nombre,correoelectronico,contraseña,rol;
+
 
     public AlumnoModel() {
     }
 
-    public AlumnoModel(String nombre, String correoelectronico, String rut) {
+    public AlumnoModel(String nombre, String correoelectronico, String contraseña, String rol) {
         this.nombre = nombre;
         this.correoelectronico = correoelectronico;
-        this.rut = rut;
+        this.contraseña = contraseña;
+        this.rol = rol;
     }
+
 
     public String getNombre() {
         return nombre;
@@ -29,11 +32,19 @@ public class AlumnoModel {
         this.correoelectronico = correoelectronico;
     }
 
-    public String getRut() {
-        return rut;
+    public String getContraseña() {
+        return contraseña;
     }
 
-    public void setRut(String rut) {
-        this.rut = rut;
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }
