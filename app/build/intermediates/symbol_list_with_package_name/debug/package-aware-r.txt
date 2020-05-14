@@ -1723,6 +1723,7 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id enviarMensajesChatAlumnosBtn
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1740,6 +1741,7 @@ id filter_chip
 id fitToContents
 id fixed
 id forever
+id fotoPerfilChatAlumnosIv
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
@@ -1750,6 +1752,7 @@ id groups
 id hideable
 id home
 id homeAsUp
+id horaCardviewChatAlumnosTv
 id horizontal
 id icon
 id icon_group
@@ -1790,6 +1793,9 @@ id loguearse_btn
 id masked
 id materia
 id media_actions
+id mensajeCardviewChatAlumnosTv
+id mensajesChatAlumnosRv
+id mensajesEnviadosChatAlumnosEt
 id message
 id middle
 id mini
@@ -1821,14 +1827,13 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id nav_Chat
 id nav_Inspectoria
-id nav_agregaracursos
 id nav_agregaralumnos
-id nav_agregarmaterias
 id nav_agregarprofesores
-id nav_asignarmaterias
 id nav_campus
 id nav_cerrarSesion
+id nav_chat_admin
 id nav_controller_view_tag
 id nav_desafios
 id nav_direccion
@@ -1844,9 +1849,11 @@ id never
 id noScroll
 id no_fill_large_indicator
 id nombre
+id nombreUsuarioChatAlumnosTv
 id nombreUsuarioMenu
 id nombrealumno
 id nombreprofe
+id nombreusuarioCardviewChatAlumnosTv
 id none
 id normal
 id notification_background
@@ -2091,6 +2098,7 @@ layout activity_registerprueba
 layout app_bar_administrador_principal
 layout app_bar_inicio
 layout app_bar_profe_inicio
+layout cardview_mensajes_chat_alumnos
 layout content_administrador_principal
 layout content_inicio
 layout content_profe_inicio
@@ -2122,6 +2130,7 @@ layout fragment_asistencia_inspectoria
 layout fragment_avisos
 layout fragment_buzon
 layout fragment_campus_interactivo
+layout fragment_chat_alumnos
 layout fragment_comunicados
 layout fragment_cursos_profe
 layout fragment_desafios

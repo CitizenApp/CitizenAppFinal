@@ -8,7 +8,7 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="nav_Inspectoria">
+                  <entry key="nav_Chat">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -20,7 +20,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="nav_agregaracursos">
+                  <entry key="nav_Inspectoria">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -44,31 +44,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="nav_agregarmaterias">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="nav_agregarprofesores">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="nav_asignar">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -93,6 +69,18 @@
                     </value>
                   </entry>
                   <entry key="nav_cerrarSesion">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_chat">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
