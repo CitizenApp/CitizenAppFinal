@@ -114,7 +114,7 @@ public class campusInteractivoFragment extends Fragment {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 if (dataSnapshot.exists()){
-                                    //Esto ya te dara el nombre de la materia
+                                   
                                     ma.setText(dataSnapshot.child("nombre").getValue(String.class));
                                 }
                             }
