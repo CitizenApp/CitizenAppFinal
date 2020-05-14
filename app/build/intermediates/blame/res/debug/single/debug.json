@@ -308,6 +308,10 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\ciudadana.png"
     },
     {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_cardview_mensajes_chat_alumnos.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\cardview_mensajes_chat_alumnos.xml"
+    },
+    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafios_tab2.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_desafios_tab2.xml"
     },
@@ -518,6 +522,10 @@
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_asistencia_inspectoria.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_asistencia_inspectoria.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_chat_alumnos.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_chat_alumnos.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\menu_activity_profe_inicio_drawer.xml.flat",
