@@ -1829,11 +1829,8 @@ id mtrl_picker_title_text
 id multiply
 id nav_Chat
 id nav_Inspectoria
-id nav_agregaracursos
 id nav_agregaralumnos
-id nav_agregarmaterias
 id nav_agregarprofesores
-id nav_asignarmaterias
 id nav_campus
 id nav_cerrarSesion
 id nav_chat_admin
