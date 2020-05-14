@@ -46,6 +46,10 @@ public class campusInteractivoFragment extends Fragment {
    FirebaseUser user;
    String ui;
    TextView ma;
+   FirebaseAuth auth;
+   FirebaseDatabase firebaseDatabase;
+
+
 
    DatabaseReference databaseReference;
 
@@ -92,6 +96,45 @@ public class campusInteractivoFragment extends Fragment {
     public void onStart() {
         super.onStart();
         RelativeLayout artes=getView().findViewById(R.id.artes);
+        FirebaseUser fu = FirebaseAuth.getInstance().getCurrentUser() ;
+        final String userId = fu.getUid();
+        databaseReference = firebaseDatabase.getInstance().getReference();
+
+
+        ma=getView().findViewById(R.id.uno);
+
+        DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("MateriasAsignadas");
+        dbr.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for(DataSnapshot ds : dataSnapshot.getChildren()){{
+                        String idmateria = ds.child("idmateria").getValue(String.class);
+                        databaseReference.child("Materias").child(idmateria).addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                if (dataSnapshot.exists()){
+                                    //Esto ya te dara el nombre de la materia
+                                    ma.setText(dataSnapshot.child("nombre").getValue(String.class));
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
+                    }}
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
 
 
 
