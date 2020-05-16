@@ -53,10 +53,25 @@
         app:layout_constraintTop_toBottomOf="@+id/nombreprofe" />
 
     <EditText
-        android:id="@+id/rutprofe_et"
+        android:id="@+id/contraseñaprofe_et"
         android:layout_width="243dp"
         android:layout_height="63dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Contraseña"
+        android:inputType="text"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegistroprofe_et" />
+
+    <EditText
+        android:id="@+id/rutprofe_et"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#BA68C8"
         android:ems="10"
         android:foregroundTint="#BA68C8"
@@ -65,7 +80,7 @@
         android:shadowColor="#BA68C8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailRegistroprofe_et" />
+        app:layout_constraintTop_toBottomOf="@+id/contraseñaprofe_et" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/agregarprofe_btn"

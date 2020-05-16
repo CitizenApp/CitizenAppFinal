@@ -364,6 +364,10 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\historia.png"
     },
     {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_admin_agregaralumnosacurso.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_admin_agregaralumnosacurso.xml"
+    },
+    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\menu_activity_administrador_principal_drawer.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\menu\\activity_administrador_principal_drawer.xml"
     },
@@ -502,6 +506,10 @@
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_rowmaterias.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\rowmaterias.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_matematicas.png.flat",

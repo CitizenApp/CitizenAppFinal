@@ -1,18 +1,24 @@
 package com.bluescreen.citizenapp.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bluescreen.citizenapp.Administrador.ui.Materias.AdapterMateria;
+import com.bluescreen.citizenapp.Administrador.ui.Materias.Materias;
 import com.bluescreen.citizenapp.AgendaFragment;
 import com.bluescreen.citizenapp.AvisosFragment;
 import com.bluescreen.citizenapp.DocumentosFragment;
@@ -26,6 +32,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,9 +58,14 @@ public class campusInteractivoFragment extends Fragment {
    FirebaseAuth auth;
    FirebaseDatabase firebaseDatabase;
 
-
-
    DatabaseReference databaseReference;
+
+
+   RecyclerView recyclerView;
+    List<Materias> materias;
+    AdapterMateria adaptermaterias;
+
+
 
     public campusInteractivoFragment() {
         // Required empty public constructor
@@ -92,16 +106,23 @@ public class campusInteractivoFragment extends Fragment {
 
     }
 
+    @SuppressLint("WrongConstant")
     @Override
     public void onStart() {
         super.onStart();
-        RelativeLayout artes=getView().findViewById(R.id.artes);
+
+
+        recyclerView =getView().findViewById(R.id.recycle_materias);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setHasFixedSize(true);
+
+        materias =new ArrayList<>();
+        adaptermaterias=new AdapterMateria(materias);
+
+
         FirebaseUser fu = FirebaseAuth.getInstance().getCurrentUser() ;
         final String userId = fu.getUid();
         databaseReference = firebaseDatabase.getInstance().getReference();
-
-
-        ma=getView().findViewById(R.id.uno);
 
         DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("MateriasAsignadas");
         dbr.addValueEventListener(new ValueEventListener() {
@@ -114,11 +135,19 @@ public class campusInteractivoFragment extends Fragment {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 if (dataSnapshot.exists()){
-                                   
-                                    ma.setText(dataSnapshot.child("nombre").getValue(String.class));
-                                }
-                            }
+                                    for(DataSnapshot ds: dataSnapshot.getChildren()){
+                                        Materias noticia = dataSnapshot.getValue(Materias.class);
+                                        materias.add(noticia);
 
+
+                                    }
+
+                                    adaptermaterias=new AdapterMateria(materias,getContext());
+                                    recyclerView.setAdapter(adaptermaterias);
+
+                                }
+
+                            }
                             @Override
                             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -134,12 +163,7 @@ public class campusInteractivoFragment extends Fragment {
             }
         });
 
-
-
-
-
-
-       //artes.setOnClickListener(new View.OnClickListener() {
+        //artes.setOnClickListener(new View.OnClickListener() {
            // @Override
             //public void onClick(View v) {
                 // Create new fragment and transaction

@@ -33,7 +33,6 @@ public class adminagregarmaterias extends Fragment {
     EditText materia;
     DatabaseReference databaseReference;
     Button agregarmateria;
-
     MateriaModel materiaModel;
 
     public adminagregarmaterias() {

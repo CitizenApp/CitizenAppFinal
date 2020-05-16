@@ -140,6 +140,7 @@ public class adminasignarmateriasalumnos extends Fragment {
 
     }
 
+    //alumno
     public void cargarmateria(){
         final List<Asignacionmaterialumnocargarmateria> materiass=new ArrayList<>();
         databaseReference.child("Materias").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -178,10 +179,11 @@ public class adminasignarmateriasalumnos extends Fragment {
             }
         });
     }
-
+// curso
     public void cargaralumno(){
+        int rol=0;
         final List<AsignarmateriasalumnosModel> alumnoss=new ArrayList<>();
-        databaseReference.child("Personal").addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("Personal").orderByChild("rol").equalTo(rol).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
