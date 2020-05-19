@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Alumnos.ChatAlumnosFragment"
+android:padding="5sp"
+android:orientation="vertical"
+    >
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AulaInteractiva.BarraTareasFragment">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fotoPerfilChatAlumnosIv"
+        android:layout_width="48sp"
+        android:layout_height="48sp"
+        android:src="@drawable/vida_sana"
+        />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        >
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+
+                android:id="@+id/NombreTareaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tarea"
+                android:textSize="25dp" />
+
+            <TextView
+
+                android:id="@+id/FechaTareaTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fecha"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+            <TextView
+                android:id="@+id/DescripcionTareaTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripcion"
+                android:textSize="15dp"
+                />
+    </LinearLayout>
+
+</LinearLayout>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/ListaTareasAlumnosRv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    />
+
+</LinearLayout>
+
