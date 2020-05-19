@@ -1,5 +1,7 @@
 package com.bluescreen.citizenapp.Administrador.ui.Materias;
 
+import androidx.annotation.NonNull;
+
 public class Materias {
 
     String nombre;
@@ -17,5 +19,11 @@ public class Materias {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return nombre;
     }
 }

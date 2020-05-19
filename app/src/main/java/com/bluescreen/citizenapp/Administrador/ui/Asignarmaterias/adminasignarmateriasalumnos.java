@@ -17,9 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bluescreen.citizenapp.Administrador.MateriaModel;
+import com.bluescreen.citizenapp.Administrador.ui.AsignarMateriaAProfe.materiaprofeModel;
 import com.bluescreen.citizenapp.Asignacionmaterialumnocargarmateria;
 import com.bluescreen.citizenapp.AsignarmateriasalumnosModel;
 import com.bluescreen.citizenapp.R;
+import com.bluescreen.citizenapp.cargarcursoModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -50,7 +52,8 @@ public class adminasignarmateriasalumnos extends Fragment {
     String id,iddd;
 
 
-    Spinner materias,alumnos;
+
+    Spinner materias,cursos;
     Button agregar;
     DatabaseReference databaseReference,databaseReference2;
     TextView idesito,idesito2;
@@ -105,7 +108,7 @@ public class adminasignarmateriasalumnos extends Fragment {
         super.onStart();
         agregar=getView().findViewById(R.id.agregarasignacion);
         materias=getView().findViewById(R.id.spinnermateria);
-          alumnos=getView().findViewById(R.id.spinneralumno);
+          cursos=getView().findViewById(R.id.spinnercursito);
         idesito=getView().findViewById(R.id.id);
         idesito2=getView().findViewById(R.id.id2);
         databaseReference=FirebaseDatabase.getInstance().getReference();
@@ -114,7 +117,7 @@ public class adminasignarmateriasalumnos extends Fragment {
 
 
 
-        cargaralumno();
+        llenarcurso();
         cargarmateria();
 
        agregar.setOnClickListener(new View.OnClickListener() {
@@ -123,7 +126,7 @@ public class adminasignarmateriasalumnos extends Fragment {
                String keyValue = iddd;
                String keyValue2= id;
                DatabaseReference dbr = FirebaseDatabase.getInstance().getReference()
-                       .child("Personal").child(idd2).child("MateriasAsignadas").child(iddd);
+                       .child("Cursos").child(idd2).child("MateriasAsignadas").child(iddd);
 
                asignaciondemateriasModel.setIdmateria(iddd);
                dbr.setValue(asignaciondemateriasModel).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -180,41 +183,35 @@ public class adminasignarmateriasalumnos extends Fragment {
         });
     }
 // curso
-    public void cargaralumno(){
-        int rol=0;
-        final List<AsignarmateriasalumnosModel> alumnoss=new ArrayList<>();
-        databaseReference.child("Personal").orderByChild("rol").equalTo(rol).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    for(DataSnapshot ds :dataSnapshot.getChildren()){
-                         id2=ds.getKey();
-                        String nombre=ds.child("nombre").getValue(String.class);
-                        alumnoss.add(new AsignarmateriasalumnosModel(id2,nombre));
-                    }
-                    ArrayAdapter<AsignarmateriasalumnosModel> areasAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, alumnoss);
-                    alumnos.setAdapter(areasAdapter);
-                    alumnos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                             idd2=alumnoss.get(i).getNombrealumno();
-                            idesito.setText(idd2);
-                        }
+public void llenarcurso(){
+    final List<cargarcursoModel> Cursos=new ArrayList<>();
+    databaseReference.child("Cursos").addListenerForSingleValueEvent(new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                id2 = ds.getKey();
+                String nombre = ds.child("nombre").getValue(String.class);
+                Cursos.add(new cargarcursoModel(id2, nombre));
+            }
+            ArrayAdapter<cargarcursoModel> areasAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, Cursos);
+            cursos.setAdapter(areasAdapter);
+            cursos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    idd2=Cursos.get(position).getNombrecurso();
+                }
 
-                        @Override
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
-                    });
-
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
 
                 }
-            }
+            });
+        }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
-    }
+        }
+    });
+}
 }

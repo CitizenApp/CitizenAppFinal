@@ -23,7 +23,7 @@
         android:id="@+id/nombrealumno"
         android:layout_width="243dp"
         android:layout_height="63dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#BA68C8"
         android:ems="10"
         android:foregroundTint="#BA68C8"
@@ -31,7 +31,6 @@
         android:inputType="textPersonName"
         android:shadowColor="#BA68C8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -87,10 +86,12 @@
         android:layout_height="50dp"
         android:layout_marginBottom="112dp"
         android:text="Agregar"
+        android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rut_et"
+        app:layout_constraintVertical_bias="1.0"
         app:strokeColor="#ba68c8" />
 
 

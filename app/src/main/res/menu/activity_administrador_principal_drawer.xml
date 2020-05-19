@@ -6,39 +6,52 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Inicio" />
         <item
             android:id="@+id/nav_agregarprofesores"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_create_black_24dp"
             android:title="Agregar Profesores" />
         <item
             android:id="@+id/nav_agregaralumnos"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_create_black_24dp"
             android:title="Agregar Alumnos" />
 
         <item
             android:id="@+id/nav_agregarcurso"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_create_black_24dp"
             android:title="Agregar Cursos" />
 
         <item
             android:id="@+id/nav_agregarmaterias"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_create_black_24dp"
             android:title="Agregar Materias" />
         <item
             android:id="@+id/nav_asignarmaterias"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Asignar Materias a alumnos" />
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="Asignar Materias a Cursos" />
 
         <item
             android:id="@+id/nav_asignarcurso"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_create_black_24dp"
             android:title="Asignar alumnos a curso" />
         <item
             android:id="@+id/nav_chat_admin"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_create_black_24dp"
             android:title="Chat" />
+
+        <item
+            android:id="@+id/nav_asignarcursoaalumno"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="Asignar Curso a Alumno" />
+        <item
+            android:id="@+id/nav_asignarcursoaprofe"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="Asignar Curso a Profesor" />
+        <item
+            android:id="@+id/nav_asignarramoaprofe"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="Asignar Ramo a Profesor" />
 
 
     </group>

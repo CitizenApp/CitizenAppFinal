@@ -1,28 +1,20 @@
 package com.bluescreen.citizenapp.ui;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bluescreen.citizenapp.Administrador.ui.Materias.AdapterMateria;
-import com.bluescreen.citizenapp.Administrador.ui.Materias.Materias;
-import com.bluescreen.citizenapp.AgendaFragment;
-import com.bluescreen.citizenapp.AvisosFragment;
-import com.bluescreen.citizenapp.DocumentosFragment;
-import com.bluescreen.citizenapp.Fragmentaula;
 import com.bluescreen.citizenapp.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,7 +22,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -41,7 +32,7 @@ import java.util.List;
  * Use the {@link campusInteractivoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class campusInteractivoFragment extends Fragment {
+public class campusInteractivoFragment extends Fragment  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -61,8 +52,13 @@ public class campusInteractivoFragment extends Fragment {
    DatabaseReference databaseReference;
 
 
+   String idmateria;
+
+
    RecyclerView recyclerView;
-    List<Materias> materias;
+    List<CampusinteractivoModel> materias;
+
+
     AdapterMateria adaptermaterias;
 
 
@@ -112,47 +108,78 @@ public class campusInteractivoFragment extends Fragment {
         super.onStart();
 
 
-        recyclerView =getView().findViewById(R.id.recycle_materias);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        recyclerView=getView().findViewById(R.id.recycle_materias);
+        materias=new ArrayList<>();
+
+
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);
-
-        materias =new ArrayList<>();
-        adaptermaterias=new AdapterMateria(materias);
-
 
         FirebaseUser fu = FirebaseAuth.getInstance().getCurrentUser() ;
         final String userId = fu.getUid();
         databaseReference = firebaseDatabase.getInstance().getReference();
 
-        DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("MateriasAsignadas");
+
+
+
+        DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("CursoAsignado");
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot ds : dataSnapshot.getChildren()){{
-                        String idmateria = ds.child("idmateria").getValue(String.class);
-                        databaseReference.child("Materias").child(idmateria).addValueEventListener(new ValueEventListener() {
+                        final String idcurso = ds.getKey();
+
+                        databaseReference.child("Cursos").child(idcurso).child("MateriasAsignadas").addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                if (dataSnapshot.exists()){
-                                    for(DataSnapshot ds: dataSnapshot.getChildren()){
-                                        Materias noticia = dataSnapshot.getValue(Materias.class);
-                                        materias.add(noticia);
+                                if(dataSnapshot.exists()){
+                                    for(DataSnapshot ds : dataSnapshot.getChildren()){{
+                                         idmateria = ds.getKey();
+                                        databaseReference.child("Materias").child(idmateria).addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                for(DataSnapshot ds : dataSnapshot.getChildren()){
+
+                                                    CampusinteractivoModel noticia = dataSnapshot.getValue(CampusinteractivoModel.class);
+                                                    //materias.add(noticia);
+                                                    noticia.id=dataSnapshot.getKey();
+                                                    materias.add(noticia);
 
 
-                                    }
+                                                }
 
-                                    adaptermaterias=new AdapterMateria(materias,getContext());
-                                    recyclerView.setAdapter(adaptermaterias);
+                                                adaptermaterias=new AdapterMateria(materias,getContext());
+                                                adaptermaterias.notifyDataSetChanged();
+                                                recyclerView.setAdapter(adaptermaterias);
 
+                                            }
+
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                            }
+                                        });
+
+                                    }}
                                 }
 
+
+
+
                             }
+
                             @Override
                             public void onCancelled(@NonNull DatabaseError databaseError) {
 
                             }
                         });
+
+
                     }}
                 }
             }
@@ -162,6 +189,10 @@ public class campusInteractivoFragment extends Fragment {
 
             }
         });
+
+
+
+
 
         //artes.setOnClickListener(new View.OnClickListener() {
            // @Override

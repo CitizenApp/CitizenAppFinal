@@ -58,7 +58,7 @@
     <fragment
         android:id="@+id/nav_asignarmaterias"
         android:name="com.bluescreen.citizenapp.Administrador.ui.Asignarmaterias.adminasignarmateriasalumnos"
-        android:label="Asignar Materias a alumnos"
+        android:label="Asignar Materias a Cursos"
         tools:layout="@layout/fragment_adminasignarmateriasalumnos" />
 
 
@@ -87,9 +87,34 @@
         tools:layout="@layout/fragment_chat_alumnos" />
 
     <fragment
+        android:id="@+id/nav_subirArchivos"
+        android:name="com.bluescreen.citizenapp.Profe.SubirArchivoFragment"
+        android:label="Subir Archivo"
+        tools:layout="@layout/fragment_subir_archivo" />
+
+    <fragment
         android:id="@+id/nav_chat_admin"
         android:name="com.bluescreen.citizenapp.Alumnos.ChatAlumnosFragment"
         android:label="Chat Alumnos"
         tools:layout="@layout/fragment_chat_alumnos" />
+
+    <fragment
+        android:id="@+id/nav_asignarcursoaalumno"
+        android:name="com.bluescreen.citizenapp.Administrador.ui.AsignarCursoAlumno.AsignarCursoAlumno"
+        android:label="Asignar Curso A Alumno"
+        tools:layout="@layout/fragment_asignar_curso_alumno" />
+    <fragment
+        android:id="@+id/nav_asignarcursoaprofe"
+        android:name="com.bluescreen.citizenapp.Administrador.ui.AsignarCursoAProfesor.admin_asignarcursoaprofesor"
+        android:label="Asignar Curso A Profesor"
+        tools:layout="@layout/fragment_admin_asignarcursoaprofesor" />
+
+    <fragment
+        android:id="@+id/nav_asignarramoaprofe"
+        android:name="com.bluescreen.citizenapp.Administrador.ui.AsignarMateriaAProfe.admin_AsignarMateriAProfe"
+        android:label="Asignar Ramo a Profesor"
+        tools:layout="@layout/fragment_admin__asignar_materi_a_profe" />
+
+
 
 </navigation>

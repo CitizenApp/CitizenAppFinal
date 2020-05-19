@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     android:background="#F9FAF6"
+    android:clickable="true"
     android:layout_height="match_parent"
     tools:context=".ui.campusInteractivoFragment">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_materias"
+        android:clickable="true"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp" />
-
-
 </LinearLayout>

@@ -80,7 +80,31 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="nav_as">
+                  <entry key="nav_asignarcurso">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_asignarcursoaalumno">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_asignarcursoaprofe">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -93,6 +117,18 @@
                     </value>
                   </entry>
                   <entry key="nav_asignarmaterias">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_asignarr">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -177,6 +213,18 @@
                     </value>
                   </entry>
                   <entry key="nav_publicarNoticia">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_subirArchivos">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">

@@ -7,12 +7,12 @@
 
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Inicio" />
 
         <item
             android:id="@+id/nav_Chat"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_message_black_24dp"
             android:title="Chat" />
         <item
             android:id="@+id/nav_campus"
@@ -38,7 +38,7 @@
 
         <item
             android:id="@+id/nav_cerrarSesion"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
             android:title="Cerrar Sesion" />
 
 

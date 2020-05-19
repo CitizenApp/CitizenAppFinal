@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Alumnos.ChatAlumnosFragment"
-    android:padding="5sp"
+    android:padding="15sp"
     android:orientation="vertical"
     >
 
@@ -16,7 +16,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/fotoPerfilChatAlumnosIv"
             android:layout_width="48sp"
-            android:layout_height="48sp"
+            android:layout_height="40sp"
             android:src="@drawable/usuario"
             />
         <TextView
@@ -24,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Romualdo"
+            android:layout_marginLeft="20dp"
             android:layout_gravity="center"
             />
     </LinearLayout>

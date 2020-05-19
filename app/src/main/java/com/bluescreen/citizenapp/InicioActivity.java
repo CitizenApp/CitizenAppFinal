@@ -32,7 +32,7 @@ import androidx.appcompat.widget.Toolbar;
 public class InicioActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private TextView nombreUsuario, emailUsuario;
     private FirebaseAuth firebaseAuth;
-    private ImageView imagenUsuarioMenu;
+
     FirebaseStorage firebaseStorage;
 
     View mView;
@@ -69,9 +69,9 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
         mView = navigationView.getHeaderView(0);
         nombreUsuario = (TextView) mView.findViewById(R.id.nombreUsuarioMenu);
         emailUsuario = (TextView) mView.findViewById(R.id.emailUsuarioMenu);
-        imagenUsuarioMenu = (ImageView)mView.findViewById(R.id.imagenUsuarioMenu_img);
 
-        Glide.with(this).load(firebaseUser.getPhotoUrl()).into(imagenUsuarioMenu);
+
+
        // assert firebaseUser != null;
       nombreUsuario.setText(firebaseUser.getDisplayName());
        emailUsuario.setText(firebaseUser.getEmail());

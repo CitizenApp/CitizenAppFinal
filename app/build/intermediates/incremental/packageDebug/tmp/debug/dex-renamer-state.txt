@@ -1,4 +1,4 @@
-#Sat May 16 10:18:23 CST 2020
+#Tue May 19 15:52:07 CST 2020
 base.0=C\:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

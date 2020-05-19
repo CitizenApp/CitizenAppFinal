@@ -10,9 +10,10 @@
         android:id="@+id/btnSelectArchivoProfe"
         android:layout_width="244dp"
         android:layout_height="45dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="32dp"
         android:text="Seleccionar Archivo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -20,34 +21,86 @@
         android:id="@+id/textView14"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:layout_marginTop="80dp"
-        android:text="Subir Archivo"
-        android:textSize="40dp"
+        android:layout_marginTop="36dp"
+        android:text="Subir Recurso"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.664"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtNotificationFile"
-        android:layout_width="175dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="48dp"
-        android:text="No ha seleccionado Archivo"
+        android:id="@+id/textView20"
+        android:layout_width="153dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text="Seleccion Curso"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="153dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:text="Seleccion Materia"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerarchivocurso" />
+
+    <Spinner
+        android:id="@+id/spinnerarchivocurso"
+        android:layout_width="224dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <Spinner
+        android:id="@+id/spinnerarchivomateria"
+        android:layout_width="224dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Titulo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSelectArchivoProfe" />
 
-    <Button
-        android:id="@+id/btnUploadArchivoProfe"
-        android:layout_width="181dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="36dp"
-        android:text="Subir Archivo"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNotificationFile"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerarchivomateria" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
