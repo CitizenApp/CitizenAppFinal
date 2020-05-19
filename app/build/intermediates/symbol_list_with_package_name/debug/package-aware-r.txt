@@ -1638,6 +1638,7 @@ id adjust_height
 id adjust_width
 id agenda
 id agregar_btn
+id agregaralumnoacurso
 id agregarasignacion
 id agregarcurso
 id agregarmateria
@@ -1646,7 +1647,6 @@ id alertTitle
 id all
 id alumnos
 id always
-id artes
 id async
 id auto
 id barrier
@@ -1687,6 +1687,7 @@ id contenido_noticiasHome2
 id content
 id contentPanel
 id contraseña_et
+id contraseñaprofe_et
 id coordinator
 id correo
 id cursoet
@@ -1830,7 +1831,11 @@ id multiply
 id nav_Chat
 id nav_Inspectoria
 id nav_agregaralumnos
+id nav_agregarcurso
+id nav_agregarmaterias
 id nav_agregarprofesores
+id nav_asignarcurso
+id nav_asignarmaterias
 id nav_campus
 id nav_cerrarSesion
 id nav_chat_admin
@@ -1881,6 +1886,7 @@ id progress_circular
 id progress_horizontal
 id publcarNoticia_btn
 id radio
+id recycle_materias
 id recycle_newsHome
 id registro
 id registroNombre_et
@@ -1928,6 +1934,7 @@ id spacer
 id spinner
 id spinner_justificacion
 id spinneralumno
+id spinnercurso
 id spinnermateria
 id split_action_bar
 id spread
@@ -1969,6 +1976,8 @@ id textView14
 id textView15
 id textView16
 id textView17
+id textView18
+id textView19
 id textView2
 id textView3
 id textView4
@@ -2010,10 +2019,12 @@ id txtDescripcionNoticia
 id txtFechaNoticia
 id txtNotificationFile
 id txtTituloNoticia
+id txtTitulomateria
+id txtalumno
+id txtcurso
 id unchecked
 id uniform
 id unlabeled
-id uno
 id up
 id useLogo
 id user_photo
@@ -2121,6 +2132,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_admin_agregar_alumnos
 layout fragment_admin_agregar_profesores
+layout fragment_admin_agregaralumnosacurso
 layout fragment_adminagregarcursos
 layout fragment_adminagregarmaterias
 layout fragment_adminasignarmateriasalumnos
@@ -2198,6 +2210,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout row_noticias
+layout rowmaterias
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

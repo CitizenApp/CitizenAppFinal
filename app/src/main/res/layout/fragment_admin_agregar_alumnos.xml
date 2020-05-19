@@ -90,7 +90,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rutprofe_et"
+        app:layout_constraintTop_toBottomOf="@+id/rut_et"
         app:strokeColor="#ba68c8" />
 
 

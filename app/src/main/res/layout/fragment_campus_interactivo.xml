@@ -1,5 +1,5 @@
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,170 +8,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.campusInteractivoFragment">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_materias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Campus Interactivo"
-            android:textSize="24sp"
-            android:textAllCaps="true"
-            android:padding="10dp"
-            android:fontFamily="sans-serif-black"></TextView>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp">
-            <RelativeLayout
-                android:id="@+id/artes"
-                android:clickable="true"
-                android:onClick="onClick"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="30dp"
-                android:background="@drawable/artesbg"
-                tools:ignore="OnClick">
-
-                <TextView
-                    android:id="@+id/uno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textColor="#ffffff"
-                    android:fontFamily="sans-serif-black"
-                    android:textSize="24sp"
-                    android:padding="25dp">
-
-                </TextView>
-            </RelativeLayout>
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="-30dp"
-                android:src="@drawable/paleta"
-                android:layout_alignParentRight="true">
-
-            </ImageView>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_margin="30dp"
-            android:background="@drawable/cienciasbg">
-            <ImageView
-                android:layout_width="70dp"
-                android:src="@drawable/educacion"
-                android:layout_marginLeft="20dp"
-                android:layout_height="match_parent">
-
-            </ImageView>
-            <TextView
-                android:textColor="#ffffff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ciencias"
-                android:textStyle="bold"
-                android:layout_alignParentRight="true"
-                android:fontFamily="sans-serif-black"
-                android:textSize="24sp"
-                android:padding="25dp">
-
-            </TextView>
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="30dp"
-                android:background="@drawable/lenguajebg">
-                <TextView
-                    android:textStyle="bold"
-                    android:textColor="#ffffff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lenguaje"
-                    android:fontFamily="sans-serif-black"
-                    android:textSize="24sp"
-                    android:padding="25dp">
-
-                </TextView>
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
 
 
-            </RelativeLayout>
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="100dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="-20dp"
-                android:src="@drawable/biblioteca"
-                android:layout_alignParentRight="true">
-
-            </ImageView>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_margin="30dp"
-            android:background="@drawable/historiabg">
-            <ImageView
-                android:layout_width="80dp"
-                android:src="@drawable/his"
-                android:layout_marginLeft="20dp"
-                android:layout_height="match_parent">
-
-            </ImageView>
-            <TextView
-                android:textColor="#ffffff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Historia"
-                android:textStyle="bold"
-                android:layout_alignParentRight="true"
-                android:fontFamily="sans-serif-black"
-                android:textSize="24sp"
-                android:padding="25dp">
-
-            </TextView>
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="30dp"
-                android:background="@drawable/matematicasbg">
-                <TextView
-                    android:textStyle="bold"
-                    android:textColor="#ffffff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Matematicas"
-                    android:fontFamily="sans-serif-black"
-                    android:textSize="24sp"
-                    android:padding="25dp">
-
-                </TextView>
-
-
-            </RelativeLayout>
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="-15dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/lapiz"
-                android:layout_alignParentRight="true">
-
-            </ImageView>
-        </RelativeLayout>
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

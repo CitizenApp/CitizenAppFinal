@@ -2,38 +2,50 @@ package com.bluescreen.citizenapp.Administrador;
 
 public class ProfesorModel {
 
-    private String nombre,correoelectronico,rut;
+    String nombreprofe;
+    String correoprofe;
+    int rolprofe;
+    String rutprofe;
 
     public ProfesorModel() {
     }
 
-    public ProfesorModel(String nombre, String correoelectronico, String rut) {
-        this.nombre = nombre;
-        this.correoelectronico = correoelectronico;
-        this.rut = rut;
+    public ProfesorModel(String nombreprofe, String correoprofe, int rolprofe, String rutprofe) {
+        this.nombreprofe = nombreprofe;
+        this.correoprofe = correoprofe;
+        this.rolprofe = rolprofe;
+        this.rutprofe = rutprofe;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreprofe() {
+        return nombreprofe;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreprofe(String nombreprofe) {
+        this.nombreprofe = nombreprofe;
     }
 
-    public String getCorreoelectronico() {
-        return correoelectronico;
+    public String getCorreoprofe() {
+        return correoprofe;
     }
 
-    public void setCorreoelectronico(String correoelectronico) {
-        this.correoelectronico = correoelectronico;
+    public void setCorreoprofe(String correoprofe) {
+        this.correoprofe = correoprofe;
     }
 
-    public String getRut() {
-        return rut;
+    public int getRolprofe() {
+        return rolprofe;
     }
 
-    public void setRut(String rut) {
-        this.rut = rut;
+    public void setRolprofe(int rolprofe) {
+        this.rolprofe = rolprofe;
+    }
+
+    public String getRutprofe() {
+        return rutprofe;
+    }
+
+    public void setRutprofe(String rutprofe) {
+        this.rutprofe = rutprofe;
     }
 }
