@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.bluescreen.citizenapp.Administrador.ui.Curso.cursoModel;
 import com.bluescreen.citizenapp.Administrador.ui.Materias.Materias;
+import com.bluescreen.citizenapp.Objects.Adapter;
 import com.bluescreen.citizenapp.R;
 import com.bluescreen.citizenapp.cargarcursoModel;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -72,6 +73,10 @@ public class SubirArchivoFragment extends Fragment {
     List<cursoModel> cursitos;
     List<Materias> materiasl;
 
+    String pp,ff;
+
+
+
 
     public SubirArchivoFragment() {
         // Required empty public constructor
@@ -97,11 +102,15 @@ public class SubirArchivoFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        llenarcurso();
+        llenarmateria();
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -113,8 +122,8 @@ public class SubirArchivoFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        seleccionarfichero=getView().findViewById(R.id.btnSelectArchivoProfe);
 
+        seleccionarfichero=getView().findViewById(R.id.btnSelectArchivoProfe);
         titulo=getView().findViewById(R.id.editText);
         materia=getView().findViewById(R.id.spinnerarchivomateria);
         curso=getView().findViewById(R.id.spinnerarchivocurso);
@@ -122,20 +131,14 @@ public class SubirArchivoFragment extends Fragment {
         databaseReference= FirebaseDatabase.getInstance().getReference();
         curso=getView().findViewById(R.id.spinnerarchivocurso);
         materia=getView().findViewById(R.id.spinnerarchivomateria);
+
        cursitos =new ArrayList<>();
        materiasl=new ArrayList<>();
 
 
+
         kakita=getView().findViewById(R.id.textView24);
         kakita1=getView().findViewById(R.id.textView26);
-
-
-        llenarcurso();
-        llenarmateria();
-
-
-
-
 
 
         seleccionarfichero.setOnClickListener(new View.OnClickListener() {
@@ -145,6 +148,7 @@ public class SubirArchivoFragment extends Fragment {
                 selecciondearchivo();
             }
         });
+
 
     }
     public void llenarmateria(){
@@ -162,15 +166,29 @@ public class SubirArchivoFragment extends Fragment {
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 if(dataSnapshot.exists()){
                                    Materias nombre= dataSnapshot.getValue(Materias.class);
+                                   nombre.setId(dataSnapshot.getKey());
                                    materiasl.add(nombre);
-
-
-
                                 }
-
                                 ArrayAdapter<Materias> areasAdapter2 = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item,materiasl);
                                 materia.setAdapter(areasAdapter2);
+
+                                materia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                        ff=materiasl.get(position).getId();
+
+                                        kakita.setText(ff);
+
+                                    }
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> parent) {
+
+                                    }
+                                });
+
+
                             }
+
 
                             @Override
                             public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -179,16 +197,19 @@ public class SubirArchivoFragment extends Fragment {
                         });
 
 
+
                     }
 
                 }
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
+
 
     }
 
@@ -202,23 +223,32 @@ public class SubirArchivoFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot ds : dataSnapshot.getChildren()){
-                         idcurso = ds.child("idcurso").getValue(String.class);
+                        idcurso = ds.child("idcurso").getValue(String.class);
                         databaseReference.child("Cursos").child(idcurso).addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 if(dataSnapshot.exists()){
-                                    cursoModel nombre= dataSnapshot.getValue(cursoModel.class);
-                                    cursitos.add(nombre);
+
+                                        cursoModel nombre= dataSnapshot.getValue(cursoModel.class);
+                                        nombre.setId(dataSnapshot.getKey());
+                                        cursitos.add(nombre);
 
 
                                 }
-
                                 ArrayAdapter<cursoModel> areasAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, cursitos);
                                 curso.setAdapter(areasAdapter);
+                                curso.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                        pp=cursitos.get(position).getId();
+                                        kakita1.setText(pp);
+                                    }
 
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> parent) {
 
-
-
+                                    }
+                                });
 
 
                             }
@@ -277,7 +307,7 @@ public class SubirArchivoFragment extends Fragment {
 
                        Uri url=uri;
                        subirarchivoModel subirarchivoModel=new subirarchivoModel(titulo.getText().toString(),url.toString(),iduser);
-                       databaseReference.child("Cursos").child(idcurso).child("MateriasAsignadas").child(idmateria).child("pdf").child(databaseReference.push().getKey()).setValue(subirarchivoModel);
+                       databaseReference.child("Cursos").child(pp).child("MateriasAsignadas").child(ff).child("pdf").child(databaseReference.push().getKey()).setValue(subirarchivoModel);
                        Toast.makeText(getContext(),"subido",Toast.LENGTH_SHORT).show();
                        progressDialog.dismiss();
                    }

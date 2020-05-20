@@ -90,7 +90,7 @@ public class Fragmentaula extends Fragment {
 
     }
 
-    class MyPagerAdapter extends FragmentStatePagerAdapter {
+    public static class MyPagerAdapter extends FragmentStatePagerAdapter {
         private List<Fragment> fragmentList;
 
         public MyPagerAdapter(FragmentManager fm,List<Fragment> fragmentList) {

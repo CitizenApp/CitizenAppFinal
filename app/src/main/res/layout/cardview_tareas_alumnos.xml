@@ -10,64 +10,20 @@
     android:layout_marginBottom="10dp"
     android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/redocu">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:id="@+id/bb">
+
+    </Button>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/nombreTareaAlumnosCvTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nombre Tarea"
-                    android:textSize="20dp"
-                    android:layout_weight="1"
-                    />
-                <TextView
-                    android:id="@+id/fechaTareaCvTv"
-                    android:layout_width="wrap_content"
-                    android:textSize="15dp"
-                    android:layout_height="wrap_content"
-                    android:text="13/02/2020"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding=""
-                >
-                <TextView
-                    android:id="@+id/DescripcionTareaCvTv"
-                    android:layout_width="wrap_content"
-                    android:textSize="18dp"
-                    android:layout_height="wrap_content"
-                    android:text="Descripción"
-                    android:layout_weight="1"
-                    />
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/descargarTareaBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Descargar"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="#ba68c8"
-
-                    />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>

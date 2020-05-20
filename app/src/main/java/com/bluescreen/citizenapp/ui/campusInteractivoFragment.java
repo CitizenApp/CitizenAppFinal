@@ -149,7 +149,6 @@ public class campusInteractivoFragment extends Fragment  {
                                                     noticia.id=dataSnapshot.getKey();
                                                     materias.add(noticia);
 
-
                                                 }
 
                                                 adaptermaterias=new AdapterMateria(materias,getContext());
@@ -189,9 +188,6 @@ public class campusInteractivoFragment extends Fragment  {
 
             }
         });
-
-
-
 
 
         //artes.setOnClickListener(new View.OnClickListener() {

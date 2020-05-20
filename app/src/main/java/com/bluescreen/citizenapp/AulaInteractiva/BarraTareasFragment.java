@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.bluescreen.citizenapp.DetallesArchivos.DetallesArchivo;
 import com.bluescreen.citizenapp.R;
 
 /**
@@ -24,6 +26,7 @@ public class BarraTareasFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    DetallesArchivo detallesArchivo;
 
     public BarraTareasFragment() {
         // Required empty public constructor
@@ -61,5 +64,13 @@ public class BarraTareasFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_barra_tareas, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        DetallesArchivo p=new DetallesArchivo();
+        String id=p.sessionId;
+        Toast.makeText(getContext(),id,Toast.LENGTH_SHORT).show();
     }
 }

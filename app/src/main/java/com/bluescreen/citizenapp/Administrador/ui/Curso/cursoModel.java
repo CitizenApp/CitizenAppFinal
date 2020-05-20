@@ -4,10 +4,11 @@ import androidx.annotation.NonNull;
 
 public class cursoModel {
 
-    String nombre;
+    String nombre,id;
 
-    public cursoModel(String nombre) {
+    public cursoModel(String nombre, String id) {
         this.nombre = nombre;
+        this.id = id;
     }
 
     public cursoModel() {
@@ -19,6 +20,14 @@ public class cursoModel {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @NonNull

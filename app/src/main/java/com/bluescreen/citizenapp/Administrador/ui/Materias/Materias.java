@@ -4,10 +4,11 @@ import androidx.annotation.NonNull;
 
 public class Materias {
 
-    String nombre;
+    String nombre,id;
 
-    public Materias(String nombre) {
+    public Materias(String nombre, String id) {
         this.nombre = nombre;
+        this.id = id;
     }
 
     public Materias() {
@@ -19,6 +20,14 @@ public class Materias {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @NonNull

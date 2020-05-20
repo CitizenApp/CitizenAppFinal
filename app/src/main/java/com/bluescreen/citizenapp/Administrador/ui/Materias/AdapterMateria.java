@@ -1,6 +1,7 @@
 package com.bluescreen.citizenapp.Administrador.ui.Materias;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bluescreen.citizenapp.DetallesArchivos.DetallesArchivo;
+import com.bluescreen.citizenapp.DocumentosFragment;
+import com.bluescreen.citizenapp.Fragmentaula;
+import com.bluescreen.citizenapp.MainActivity;
 import com.bluescreen.citizenapp.R;
 import com.bluescreen.citizenapp.ui.CampusinteractivoModel;
 import com.google.firebase.database.DatabaseReference;
@@ -22,6 +31,8 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
 
     List<CampusinteractivoModel> materias;
     Context mContext;
+    public FragmentManager f_manager;
+
 
 
 
@@ -70,8 +81,12 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
            b.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   Toast.makeText(mContext,"Materia : "+materias.get(getAdapterPosition()).getId(),Toast.LENGTH_SHORT).show();
+                  // Toast.makeText(mContext,"Materia : "+materias.get(getAdapterPosition()).getId(),Toast.LENGTH_SHORT).show();
+                   Intent intent = new Intent(mContext, DetallesArchivo.class);
+                   intent.putExtra("ID",materias.get(getAdapterPosition()).getId());
+                   mContext.startActivity(intent);
                }
+
            });
 
 

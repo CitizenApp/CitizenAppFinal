@@ -20,20 +20,12 @@ public class BarraTareasAdapter extends RecyclerView.Adapter<HolderTareaAlumnos>
     public BarraTareasAdapter(Context c) {
         this.c = c;
     }
-    public void addTareas (TareaAlumnos t){
 
-        listaTareas.add(t);
-        notifyItemInserted(listaTareas.size());
-
-
-    }
 
     @NonNull
     @Override
     public HolderTareaAlumnos onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(c).inflate(R.layout.cardview_tareas_alumnos, parent, false);
-
-
+        View v = LayoutInflater.from(c).inflate(R.layout.rowdocu, parent, false);
         return new HolderTareaAlumnos(v);
     }
 
