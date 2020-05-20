@@ -4,16 +4,16 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\unnamed.jpg"
     },
     {
-        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_adminagregarmaterias.xml.flat",
-        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_adminagregarmaterias.xml"
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backbox.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\backbox.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vida_sana.png.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\vida_sana.png"
     },
     {
-        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backbox.xml.flat",
-        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\backbox.xml"
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_adminagregarmaterias.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_adminagregarmaterias.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -60,12 +60,12 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_bg_topheader.png"
     },
     {
-        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_justificacion_inspectoria.xml.flat",
-        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_justificacion_inspectoria.xml"
-    },
-    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_bg_topheader.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_bg_topheader.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_justificacion_inspectoria.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_justificacion_inspectoria.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",

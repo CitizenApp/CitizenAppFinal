@@ -6,16 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bluescreen.citizenapp.Alumnos.ChatAlumnosFragment;
 import com.bluescreen.citizenapp.DetallesArchivos.DetallesArchivo;
 import com.bluescreen.citizenapp.DocumentosFragment;
 import com.bluescreen.citizenapp.Fragmentaula;
@@ -71,11 +74,15 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
 
         TextView txtTitulo,kl;
         Button b;
+        ImageView m;
+        private FragmentManager fm;
+        ChatAlumnosFragment mm;
 
 
         public MateriasHolder(@NonNull View itemView) {
             super(itemView);
             txtTitulo = itemView.findViewById(R.id.txtTitulomateria);
+            m=itemView.findViewById(R.id.imgmess);
            b=itemView.findViewById(R.id.b);
 
            b.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +96,21 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
 
            });
 
+           m.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
 
+                   //arreglar esto
+                   Fragment fragment = new ChatAlumnosFragment();
+                   FragmentManager fragmentManager = ((FragmentActivity) mContext).getSupportFragmentManager();
+                   FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                   fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
+                   fragmentTransaction.addToBackStack(null);
+                   fragmentTransaction.commit();
+
+
+               }
+           });
 
 
         }
@@ -98,6 +119,7 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
 
 
     }
+
 
 
 

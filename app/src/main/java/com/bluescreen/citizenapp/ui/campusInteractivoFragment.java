@@ -11,8 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bluescreen.citizenapp.Administrador.ui.Materias.AdapterMateria;
 import com.bluescreen.citizenapp.R;
@@ -60,6 +62,7 @@ public class campusInteractivoFragment extends Fragment  {
 
 
     AdapterMateria adaptermaterias;
+
 
 
 
@@ -111,6 +114,8 @@ public class campusInteractivoFragment extends Fragment  {
 
         recyclerView=getView().findViewById(R.id.recycle_materias);
         materias=new ArrayList<>();
+
+
 
 
 
