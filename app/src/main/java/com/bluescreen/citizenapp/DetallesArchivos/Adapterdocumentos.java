@@ -49,6 +49,8 @@ public class Adapterdocumentos extends RecyclerView.Adapter<Adapterdocumentos.Do
     @Override
     public void onBindViewHolder(@NonNull DocumentosHolder holder, final int position) {
         holder.txtTitulo.setText(docus.get(position).getTitulo());
+        holder.descripcion.setText(docus.get(position).getDescripcion());
+        holder.fecha.setText(docus.get(position).getFecha());
         holder.m.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,15 +72,18 @@ public class Adapterdocumentos extends RecyclerView.Adapter<Adapterdocumentos.Do
     }
 
     public class DocumentosHolder extends RecyclerView.ViewHolder {
-        TextView txtTitulo;
+        TextView txtTitulo,descripcion,fecha;
         FirebaseStorage storage = FirebaseStorage.getInstance();
 
 
         Button m;
         public DocumentosHolder(@NonNull View itemView) {
             super(itemView);
+            fecha=itemView.findViewById(R.id.fechaTareaCvTv);
+            descripcion=itemView.findViewById(R.id.DescripcionTareaCvTv);
             txtTitulo = itemView.findViewById(R.id.nombreTareaAlumnosCvTv);
             m=itemView.findViewById(R.id.descargarTareaBtn);
+
 
             m.setOnClickListener(new View.OnClickListener() {
                 @Override

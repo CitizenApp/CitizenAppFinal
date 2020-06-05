@@ -73,7 +73,6 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
 
 
        // assert firebaseUser != null;
-      nombreUsuario.setText(firebaseUser.getDisplayName());
        emailUsuario.setText(firebaseUser.getEmail());
 
     //   cerrarSesion_btn = (Button) mView.findViewById(R.id.nav_cerrarSesion);

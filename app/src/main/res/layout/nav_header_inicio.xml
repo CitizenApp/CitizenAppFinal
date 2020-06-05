@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/backgroundpurple"
+    android:background="#ffffff"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -18,25 +18,15 @@
         android:id="@+id/imagenUsuarioMenu_img"
         android:layout_width="67dp"
         android:layout_height="62dp"
-        android:src="@drawable/estudiando"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/estudiante"
         app:civ_border_color="#FFFFFF"
         app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailUsuarioMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nombreUsuarioMenu"
-        android:layout_width="319dp"
-        android:layout_height="32dp"
-        android:gravity="center"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenUsuarioMenu_img" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82" />
 
     <TextView
         android:id="@+id/emailUsuarioMenu"
@@ -45,12 +35,10 @@
         android:gravity="center"
         android:scrollbarTrackVertical="@drawable/backgroundpurple"
         android:text="@string/nav_header_subtitle"
-        android:textColor="#FFFFFF"
+        android:textColor="#151515"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreUsuarioMenu"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

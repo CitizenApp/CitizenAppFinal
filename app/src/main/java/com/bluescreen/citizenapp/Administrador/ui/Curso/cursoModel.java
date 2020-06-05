@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 
 public class cursoModel {
 
-    String nombre,id;
+    public String nombre,id;
 
     public cursoModel(String nombre, String id) {
         this.nombre = nombre;

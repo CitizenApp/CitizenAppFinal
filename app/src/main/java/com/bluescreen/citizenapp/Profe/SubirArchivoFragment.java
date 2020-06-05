@@ -22,9 +22,7 @@ import android.widget.Toast;
 
 import com.bluescreen.citizenapp.Administrador.ui.Curso.cursoModel;
 import com.bluescreen.citizenapp.Administrador.ui.Materias.Materias;
-import com.bluescreen.citizenapp.Objects.Adapter;
 import com.bluescreen.citizenapp.R;
-import com.bluescreen.citizenapp.cargarcursoModel;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,7 +36,9 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
@@ -59,7 +59,7 @@ public class SubirArchivoFragment extends Fragment {
     private String mParam2;
 
     Button seleccionarfichero,agregarfichero;
-    EditText titulo;
+    EditText titulo,descripcion;
     Spinner curso,materia;
     StorageReference storageReference;
     DatabaseReference databaseReference;
@@ -74,6 +74,8 @@ public class SubirArchivoFragment extends Fragment {
     List<Materias> materiasl;
 
     String pp,ff;
+    String nombrecurso;
+    String fecha;
 
 
 
@@ -102,9 +104,10 @@ public class SubirArchivoFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         llenarcurso();
         llenarmateria();
+
+
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -123,8 +126,9 @@ public class SubirArchivoFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        seleccionarfichero=getView().findViewById(R.id.btnSelectArchivoProfe);
-        titulo=getView().findViewById(R.id.editText);
+        seleccionarfichero=getView().findViewById(R.id.btnimagen);
+        titulo=getView().findViewById(R.id.titulonoticia);
+        descripcion=getView().findViewById(R.id.adddescr);
         materia=getView().findViewById(R.id.spinnerarchivomateria);
         curso=getView().findViewById(R.id.spinnerarchivocurso);
         storageReference= FirebaseStorage.getInstance().getReference("Pdfs");
@@ -132,13 +136,13 @@ public class SubirArchivoFragment extends Fragment {
         curso=getView().findViewById(R.id.spinnerarchivocurso);
         materia=getView().findViewById(R.id.spinnerarchivomateria);
 
-       cursitos =new ArrayList<>();
-       materiasl=new ArrayList<>();
+        //obtengo la fecha actual
+        SimpleDateFormat currentDate = new SimpleDateFormat("dd/MM/yyyy");
+        Date todayDate = new Date();
+         fecha = currentDate.format(todayDate);
 
 
 
-        kakita=getView().findViewById(R.id.textView24);
-        kakita1=getView().findViewById(R.id.textView26);
 
 
         seleccionarfichero.setOnClickListener(new View.OnClickListener() {
@@ -150,8 +154,42 @@ public class SubirArchivoFragment extends Fragment {
         });
 
 
+
+
+    }
+
+    public void subirarchivo(Uri data){
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
+        final String iduser=currentFirebaseUser.getUid();
+        final ProgressDialog progressDialog=new ProgressDialog(getContext());
+        progressDialog.setTitle("Subiendo");
+        progressDialog.show();
+        final StorageReference reference=storageReference.child("Pdfs"+ System.currentTimeMillis() + ".pdf");
+        reference.putFile(data).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Uri url=uri;
+                        subirarchivoModel subirarchivoModel=new subirarchivoModel(titulo.getText().toString(),url.toString(),iduser,descripcion.getText().toString(),fecha);
+                        databaseReference.child("Cursos").child(pp).child("MateriasAsignadas").child(ff).child("pdf").child(databaseReference.push().getKey()).setValue(subirarchivoModel);
+                        Toast.makeText(getContext(),"subido",Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                    }
+                });
+            }
+        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
+
+                double progress=(100.0*taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
+                progressDialog.setMessage("Subiendo"+(int)progress+"%");
+            }
+        });
     }
     public void llenarmateria(){
+        final List<Materias> materiasl=new ArrayList<>();
         FirebaseUser fu = FirebaseAuth.getInstance().getCurrentUser() ;
         final String userIdprofe = fu.getUid();
         DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userIdprofe).child("MateriaAsignada");
@@ -169,6 +207,7 @@ public class SubirArchivoFragment extends Fragment {
                                    nombre.setId(dataSnapshot.getKey());
                                    materiasl.add(nombre);
                                 }
+
                                 ArrayAdapter<Materias> areasAdapter2 = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item,materiasl);
                                 materia.setAdapter(areasAdapter2);
 
@@ -177,8 +216,6 @@ public class SubirArchivoFragment extends Fragment {
                                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                         ff=materiasl.get(position).getId();
 
-                                        kakita.setText(ff);
-
                                     }
                                     @Override
                                     public void onNothingSelected(AdapterView<?> parent) {
@@ -209,59 +246,41 @@ public class SubirArchivoFragment extends Fragment {
 
             }
         });
-
 
     }
 
     public void llenarcurso(){
-
+        final List<cursoModel> cursitos=new ArrayList<>();
         FirebaseUser fu = FirebaseAuth.getInstance().getCurrentUser() ;
         final String userId = fu.getUid();
-        DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("CursoAsignado");
+        final DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("CursoAsignado");
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    for(DataSnapshot ds : dataSnapshot.getChildren()){
-                        idcurso = ds.child("idcurso").getValue(String.class);
-                        databaseReference.child("Cursos").child(idcurso).addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                if(dataSnapshot.exists()){
+                if(dataSnapshot.exists()) {
+                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        cursoModel nombre= ds.getValue(cursoModel.class);
+                        nombre.id=ds.getKey();
+                        cursitos.add(nombre);
+                }
+                    ArrayAdapter<cursoModel> areasAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, cursitos);
+                    curso.setAdapter(areasAdapter);
+                    curso.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                                        cursoModel nombre= dataSnapshot.getValue(cursoModel.class);
-                                        nombre.setId(dataSnapshot.getKey());
-                                        cursitos.add(nombre);
-
-
-                                }
-                                ArrayAdapter<cursoModel> areasAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, cursitos);
-                                curso.setAdapter(areasAdapter);
-                                curso.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                    @Override
-                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                        pp=cursitos.get(position).getId();
-                                        kakita1.setText(pp);
-                                    }
-
-                                    @Override
-                                    public void onNothingSelected(AdapterView<?> parent) {
-
-                                    }
-                                });
+                            pp=cursitos.get(position).getId();
 
 
-                            }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                        }
 
-                            }
-                        });
-
-                    }
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
 
 
+                        }
+                    });
                 }
             }
 
@@ -270,7 +289,6 @@ public class SubirArchivoFragment extends Fragment {
 
             }
         });
-
     }
 
 
@@ -291,35 +309,5 @@ public class SubirArchivoFragment extends Fragment {
         }
     }
 
-    public void subirarchivo(Uri data){
-        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
-        final String iduser=currentFirebaseUser.getUid();
-        final ProgressDialog progressDialog=new ProgressDialog(getContext());
-        progressDialog.setTitle("Subiendo");
-        progressDialog.show();
-        final StorageReference reference=storageReference.child("Pdfs"+ System.currentTimeMillis() + ".pdf");
-       reference.putFile(data).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-           @Override
-           public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-               reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                   @Override
-                   public void onSuccess(Uri uri) {
 
-                       Uri url=uri;
-                       subirarchivoModel subirarchivoModel=new subirarchivoModel(titulo.getText().toString(),url.toString(),iduser);
-                       databaseReference.child("Cursos").child(pp).child("MateriasAsignadas").child(ff).child("pdf").child(databaseReference.push().getKey()).setValue(subirarchivoModel);
-                       Toast.makeText(getContext(),"subido",Toast.LENGTH_SHORT).show();
-                       progressDialog.dismiss();
-                   }
-               });
-           }
-       }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-           @Override
-           public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
-
-               double progress=(100.0*taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
-               progressDialog.setMessage("Subiendo"+(int)progress+"%");
-           }
-       });
-    }
 }

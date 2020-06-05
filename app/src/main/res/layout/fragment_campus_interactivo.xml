@@ -10,12 +10,22 @@
     tools:context=".ui.campusInteractivoFragment">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle_materias"
-        android:clickable="true"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_materias"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp" />
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="45dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="-400dp"
+        android:layout_marginTop="300dp"
+        android:layout_weight="14" />
+
+
 </LinearLayout>

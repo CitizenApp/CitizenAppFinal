@@ -2,10 +2,11 @@ package com.bluescreen.citizenapp.Administrador.ui.AsignarCursoAProfesor;
 
 public class cursoaprofesorModel {
 
-    String idcurso;
+    String idcurso,nombre;
 
-    public cursoaprofesorModel(String idcurso) {
+    public cursoaprofesorModel(String idcurso, String nombre) {
         this.idcurso = idcurso;
+        this.nombre = nombre;
     }
 
     public cursoaprofesorModel() {
@@ -17,5 +18,13 @@ public class cursoaprofesorModel {
 
     public void setIdcurso(String idcurso) {
         this.idcurso = idcurso;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

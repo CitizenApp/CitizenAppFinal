@@ -11,7 +11,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.bluescreen.citizenapp.Administrador.ui.Materias.AdapterMateria;
@@ -44,6 +46,7 @@ public class DetallesArchivo extends AppCompatActivity {
     List<Model> models;
     public String userId;
     Adapterdocumentos ll;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,12 +67,17 @@ public class DetallesArchivo extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         models=new ArrayList<>();
          sessionId = getIntent().getStringExtra("ID");
-         Toast.makeText(getApplicationContext(),sessionId,Toast.LENGTH_SHORT).show();
+
+         progressBar=findViewById(R.id.progressBar2);
+
+
+         //Toast.makeText(getApplicationContext(),sessionId,Toast.LENGTH_SHORT).show();
 
         DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("CursoAsignado");
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                progressBar.setVisibility(View.INVISIBLE);
                 if(dataSnapshot.exists()){
 
                     for(DataSnapshot ds : dataSnapshot.getChildren()){
@@ -88,6 +96,8 @@ public class DetallesArchivo extends AppCompatActivity {
                                     recyclerView.setAdapter(ll);
 
 
+                                }else{
+                                    Toast.makeText(getApplicationContext(),"no existe",Toast.LENGTH_LONG);
                                 }
 
 
@@ -99,7 +109,10 @@ public class DetallesArchivo extends AppCompatActivity {
                             }
                         });
                     }
+                }else{
+                    Toast.makeText(getApplicationContext(),"no existe",Toast.LENGTH_LONG);
                 }
+
             }
 
             @Override
@@ -110,6 +123,7 @@ public class DetallesArchivo extends AppCompatActivity {
 
 
     }
+
     public class MyPagerAdapter extends FragmentStatePagerAdapter {
         private List<Fragment> fragmentList;
 

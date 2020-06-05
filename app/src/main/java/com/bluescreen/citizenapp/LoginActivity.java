@@ -40,6 +40,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private ProgressDialog progressDialog;
     DatabaseReference databaseReference;
 
+    String correoverif;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,8 +83,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.regitrobtn:
-                Intent intent2 = new Intent(getApplication(), RegisterActivity.class);
-                startActivity(intent2);
+                //Intent intent2 = new Intent(getApplication(), RegisterActivity.class);
+                //startActivity(intent2);
                 break;
 
         }
@@ -96,37 +98,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         return networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
     }
 
-    private void login(){
-
-        String email = correoLoginTxt.getText().toString().trim();
-        String password = passLoginTxt.getText().toString().trim();
-        if (TextUtils.isEmpty(email)){
-            Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
-            return;
-        }
-        if (TextUtils.isEmpty(password)){
-            Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
-            return;
-        }
-        progressDialog.setMessage("Iniciando Sesion");
-        progressDialog.show();
-        firebaseAuth.signInWithEmailAndPassword(email,password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            progressDialog.dismiss();
-                            onAuthSuccess(task.getResult().getUser());
-                            //Toast.makeText(signinActivity.this, "Successfully Signed In", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-
-                        }
-                    }
-                });
-
-    }
-
     private void onAuthSuccess(FirebaseUser user) {
 
         //String username = usernameFromEmail(user.getEmail())
@@ -137,8 +108,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                     usuarios usu= dataSnapshot.getValue(usuarios.class);
-                     int userType = (usu.getRol());
+                    usuarios usu= dataSnapshot.getValue(usuarios.class);
+                    int userType = (usu.getRol());
                     //for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     // Toast.makeText(signinActivity.this, value, Toast.LENGTH_SHORT).show();
 
@@ -165,6 +136,43 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             });
         }
     }
+
+    private void login(){
+
+        final String email = correoLoginTxt.getText().toString().trim();
+        final String password = passLoginTxt.getText().toString().trim();
+
+
+        if (TextUtils.isEmpty(email)){
+            Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(password)){
+            Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        progressDialog.setMessage("Iniciando Sesion");
+        progressDialog.show();
+        firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    progressDialog.dismiss();
+                    onAuthSuccess(task.getResult().getUser());
+                    //Toast.makeText(signinActivity.this, "Successfully Signed In", Toast.LENGTH_SHORT).show();
+                }
+                else {
+
+
+                }
+
+            }
+        });
+
+    }
+
+
 
     private void loginUsuario(){
 

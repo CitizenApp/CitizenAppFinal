@@ -6,8 +6,14 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@drawable/realestate"
             android:title="Inicio" />
+
+        <item
+            android:id="@+id/nav_agregarnoticia"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="Agregar Noticias" />
+
         <item
             android:id="@+id/nav_agregarprofesores"
             android:icon="@drawable/ic_create_black_24dp"
@@ -31,13 +37,13 @@
             android:icon="@drawable/ic_create_black_24dp"
             android:title="Asignar Materias a Cursos" />
 
-        <item
-            android:id="@+id/nav_asignarcurso"
+
+          //  android:id="@+id/nav_asignarcurso"
             android:icon="@drawable/ic_create_black_24dp"
             android:title="Asignar alumnos a curso" />
-        <item
-            android:id="@+id/nav_chat_admin"
-            android:icon="@drawable/ic_create_black_24dp"
+        /
+            //android:id="@+id/nav_chat_admin"
+            //android:icon="@drawable/ic_create_black_24dp"
             android:title="Chat" />
 
         <item

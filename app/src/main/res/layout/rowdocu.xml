@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:padding="40dp"
+        android:padding="10dp"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -42,15 +43,15 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 >
+
                 <TextView
                     android:id="@+id/DescripcionTareaCvTv"
                     android:layout_width="wrap_content"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content"
-                    android:text="Descripción"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
-                    />
+                    android:text="Descripción"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/descargarTareaBtn"
                     android:layout_width="wrap_content"

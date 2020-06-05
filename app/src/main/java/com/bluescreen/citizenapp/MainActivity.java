@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -11,34 +12,28 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 private FirebaseAuth firebaseAuth;
+    private final int DURACION_SPLASH = 2000; // 2 segundos
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        firebaseAuth = FirebaseAuth.getInstance();
-    }
-    @Override
-    protected void onStart(){
-
-        super.onStart();
-
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-
-
-        if (firebaseUser != null ) {
-            AtributosGlobales.capturarEmail = firebaseUser.getEmail();
-            AtributosGlobales.capturarUsername = firebaseUser.getDisplayName();
-
-            Toast.makeText(MainActivity.this, "Hola" + AtributosGlobales.capturarUsername, Toast.LENGTH_LONG).show();
-
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(intent);
+            new Handler().postDelayed(new Runnable() {
+                public void run() {
+                    // Cuando pasen los 2 segundos, pasamos a la actividad principal de la aplicación
+                    Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }, DURACION_SPLASH);
 
             // accederInicio();
-        } else {
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(intent);
-        }
-}}
+
+    }
+
+
+
+
+
+}

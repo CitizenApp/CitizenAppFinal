@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -63,6 +64,8 @@ public class campusInteractivoFragment extends Fragment  {
 
     AdapterMateria adaptermaterias;
 
+    ProgressBar progressBar;
+
 
 
 
@@ -112,13 +115,9 @@ public class campusInteractivoFragment extends Fragment  {
 
 
 
+        progressBar=getView().findViewById(R.id.progressBar4);
         recyclerView=getView().findViewById(R.id.recycle_materias);
         materias=new ArrayList<>();
-
-
-
-
-
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);
@@ -130,10 +129,13 @@ public class campusInteractivoFragment extends Fragment  {
 
 
 
+
+
         DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("CursoAsignado");
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                progressBar.setVisibility(View.INVISIBLE);
                 if(dataSnapshot.exists()){
                     for(DataSnapshot ds : dataSnapshot.getChildren()){{
                         final String idcurso = ds.getKey();

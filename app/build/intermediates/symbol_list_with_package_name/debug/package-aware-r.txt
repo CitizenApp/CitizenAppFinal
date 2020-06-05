@@ -906,6 +906,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color loginBkColor
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -982,6 +983,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color primaryTextColor
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1006,6 +1008,8 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color whiteCardColor
+color whiteTextColor
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1163,6 +1167,7 @@ dimen fab_stroke_width
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen headerTextSize
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -1173,6 +1178,8 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen loginCardRadius
+dimen loginViewsMargin
 dimen material_emphasis_disabled
 dimen material_emphasis_high_type
 dimen material_emphasis_medium
@@ -1325,6 +1332,7 @@ dimen mtrl_textinput_start_icon_margin_end
 dimen mtrl_toolbar_default_height
 dimen nav_header_height
 dimen nav_header_vertical_spacing
+dimen newsMoreTextSize
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -1340,6 +1348,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen signup_text_margin_top
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
@@ -1448,6 +1457,8 @@ drawable avd_show_password
 drawable backbox
 drawable backgroundpurple
 drawable biblioteca
+drawable bn
+drawable box
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1458,6 +1469,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable cienciasbg
 drawable ciudadana
+drawable colegio
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1478,6 +1490,7 @@ drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable companerismo
+drawable curso2
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1490,10 +1503,14 @@ drawable educacion
 drawable electronica
 drawable electronicaf
 drawable estudiando
+drawable estudiante
 drawable fab_bg_mini
 drawable fab_bg_normal
+drawable ff
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable grupo
+drawable hg
 drawable his
 drawable historia
 drawable historiabg
@@ -1514,6 +1531,7 @@ drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_mail_outline_black_24dp
 drawable ic_menu_arrow_down_black_24dp
 drawable ic_menu_arrow_up_black_24dp
 drawable ic_menu_camera
@@ -1526,11 +1544,15 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_power_settings_new_black_24dp
 drawable ic_textsms_black_24dp
+drawable ic_vpn_key_black_24dp
 drawable icon
 drawable justificativo
 drawable lapiz
 drawable lenguaje
 drawable lenguajebg
+drawable libro
+drawable login_button_bk
+drawable login_shape_bk
 drawable logo3
 drawable logo4
 drawable marker
@@ -1548,6 +1570,7 @@ drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
 drawable negocio
+drawable nh
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1561,19 +1584,26 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable opinion
+drawable organizacion
 drawable paleta
 drawable pase
 drawable persona
 drawable porcentaje
+drawable pp
+drawable ppepe
+drawable profesor
 drawable qr
+drawable realestate
 drawable registro
 drawable science
 drawable side_nav_bar
+drawable sssd
 drawable sugerencias
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable unnamed
+drawable unnamed2
 drawable usuario
 drawable vida_sana
 id ALT
@@ -1647,6 +1677,7 @@ id actions
 id activity_chooser_view_content
 id activity_main
 id add
+id adddescr
 id adjust_height
 id adjust_width
 id agenda
@@ -1672,9 +1703,9 @@ id bg_top_header
 id blocking
 id bottom
 id btasig
-id btnSelectArchivoProfe
 id btn_justificacion
 id btnf
+id btnimagen
 id buttonPanel
 id buzon
 id cancel_action
@@ -1693,6 +1724,7 @@ id checked
 id chip
 id chip_group
 id chronometer
+id cirLoginButton
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -1704,6 +1736,7 @@ id container
 id contenido_noticiasHome2
 id content
 id contentPanel
+id content_box
 id contraseña_et
 id contraseñaprofe_et
 id coordinator
@@ -1718,6 +1751,7 @@ id decor_content_parent
 id default_activity_button
 id descargarTareaBtn
 id descripcion_noticiasHome
+id descripcionoticia
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1730,10 +1764,11 @@ id disableHome
 id down
 id drawer_layout
 id dropdown_menu
-id editText
 id editText2
 id editText3
 id editText4
+id editTextEmail
+id editTextPassword
 id edit_query
 id emailLogin_et
 id emailProfeMenu
@@ -1793,10 +1828,12 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id imageView6
+id imageView7
 id imageView8
+id imageView9
 id imagenUsuarioMenu_img
-id imgmess
 id info
 id invisible
 id italic
@@ -1811,7 +1848,6 @@ id line3
 id listMode
 id list_item
 id login_btn
-id logo_iv
 id loguearse_btn
 id masked
 id materia
@@ -1856,6 +1892,7 @@ id nav_Inspectoria
 id nav_agregaralumnos
 id nav_agregarcurso
 id nav_agregarmaterias
+id nav_agregarnoticia
 id nav_agregarprofesores
 id nav_asignarcurso
 id nav_asignarcursoaalumno
@@ -1909,6 +1946,9 @@ id percent
 id pin
 id pp
 id profesor
+id progressBar
+id progressBar2
+id progressBar4
 id progress_circular
 id progress_horizontal
 id publcarNoticia_btn
@@ -1923,6 +1963,8 @@ id right
 id right_icon
 id right_side
 id rounded
+id row_post_img
+id row_post_profile_img
 id rut_et
 id rutprofe_et
 id save_non_transition_alpha
@@ -2001,6 +2043,8 @@ id test_checkbox_app_button_tint
 id text
 id text2
 id textEnd
+id textInputEmail
+id textInputPassword
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -2020,7 +2064,6 @@ id textView20
 id textView21
 id textView22
 id textView23
-id textView24
 id textView25
 id textView26
 id textView27
@@ -2035,7 +2078,6 @@ id textView8
 id textView9
 id textViewName
 id text_gallery
-id text_home
 id text_input_end_icon
 id text_input_start_icon
 id text_slideshow
@@ -2052,6 +2094,7 @@ id titulo2
 id titulo3
 id titulo5
 id titulo_noticiaHome
+id titulonoticia
 id toolbar
 id top
 id topPanel
@@ -2062,6 +2105,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id turno
+id tv_content
+id tv_dismiss
+id tv_skip
+id tv_title
 id txtDescripcionNoticia
 id txtFechaNoticia
 id txtTituloNoticia
@@ -2180,6 +2227,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_admin__asignar_materi_a_profe
 layout fragment_admin_agregar_alumnos
+layout fragment_admin_agregar_noticias
 layout fragment_admin_agregar_profesores
 layout fragment_admin_agregaralumnosacurso
 layout fragment_admin_asignarcursoaprofesor
@@ -2214,6 +2262,7 @@ layout fragment_pases_acceso
 layout fragment_slideshow
 layout fragment_subir_archivo
 layout fragment_turnos
+layout layout_login
 layout list_item_cursoprofe
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
@@ -2267,6 +2316,7 @@ layout rowmaterias
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout showcase_content
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_design_checkbox
@@ -2359,6 +2409,9 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string home_second
 string icon_content_description
+string login_email_hint
+string login_password_hint
+string login_signup_hint
 string menu_gallery
 string menu_home
 string menu_slideshow
@@ -3099,6 +3152,15 @@ style Widget_MaterialComponents_Toolbar_Primary
 style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_Support_CoordinatorLayout
+style headerText
+style headerTextPrimary
+style linearParent
+style loginButton
+style loginCard
+style loginParent
+style modifiedEditText
+style parent
+style viewParent
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

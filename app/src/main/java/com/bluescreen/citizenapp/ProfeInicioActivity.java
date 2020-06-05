@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -22,12 +24,15 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
+
 public class ProfeInicioActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private TextView  emailUsuario;
     private FirebaseAuth firebaseAuth;
     View mView;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,7 @@ public class ProfeInicioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profe_inicio);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -45,6 +51,10 @@ public class ProfeInicioActivity extends AppCompatActivity {
                 R.id.nav_home)
                 .setDrawerLayout(drawer)
                 .build();
+
+
+
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
@@ -54,6 +64,7 @@ public class ProfeInicioActivity extends AppCompatActivity {
         mView = navigationView.getHeaderView(0);
         emailUsuario = (TextView) mView.findViewById(R.id.emailProfeMenu);;
         emailUsuario.setText(firebaseUser.getEmail());
+
     }
 
 
@@ -69,6 +80,7 @@ public class ProfeInicioActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             FirebaseAuth.getInstance().signOut();
@@ -78,6 +90,8 @@ public class ProfeInicioActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @Override
     public boolean onSupportNavigateUp() {

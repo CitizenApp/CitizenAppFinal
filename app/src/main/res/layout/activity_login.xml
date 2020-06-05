@@ -1,84 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7EEFEDED"
     tools:context=".LoginActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_shape_bk" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/regitrobtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:text="Recuperar Contraseña"
+            android:textColor="#9C27B0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="260dp"
+        android:id="@+id/layoutInput"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:text="Correo electronico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/emailLogin_et"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_mail_outline_black_24dp"
+            android:hint="ejemplo@gmail.com"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="70dp"
+            android:text="Contraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/passLogin_et"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_vpn_key_black_24dp"
+            android:hint="******"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            android:layout_marginTop="60dp"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="255dp"
+            android:layout_height="70dp"
+            android:text="Iniciar Sesion"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.532"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.838"
+            app:strokeColor="#ba68c8" />
+
+    </LinearLayout>
 
     <ImageView
-        android:id="@+id/logo_iv"
-        android:layout_width="218dp"
-        android:layout_height="150dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127"
-        app:srcCompat="@drawable/logo3" />
+        android:id="@+id/imageVIew"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo3"
+        android:padding="5dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp" />
 
-    <EditText
-        android:id="@+id/emailLogin_et"
-        android:layout_width="264dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#BA68C8"
-        android:ems="10"
-        android:foregroundTint="#BA68C8"
-        android:hint="Correo Electronico"
-        android:inputType="textEmailAddress"
-        android:shadowColor="#BA68C8"
-        android:textColorLink="#BA68C8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_iv" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_btn"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="255dp"
-        android:layout_height="70dp"
-        android:text="Iniciar Sesion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838"
-        app:strokeColor="#ba68c8" />
-
-    <EditText
-        android:id="@+id/passLogin_et"
-        android:layout_width="264dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="72dp"
-        android:backgroundTint="#BA68C8"
-        android:ems="10"
-        android:foregroundTint="#BA68C8"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:shadowColor="#BA68C8"
-        android:textColorLink="#BA68C8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailLogin_et" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/regitrobtn"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageVIew"
+        android:text="Bienvenidos"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="Recuperar Contraseña"
-        android:textColor="#BA68C8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_btn"
-        app:layout_constraintVertical_bias="0.851" />
+        android:layout_height="wrap_content" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

@@ -2,17 +2,17 @@ package com.bluescreen.citizenapp.Objects;
 
 public class Noticias_home {
     String titulo;
+    String url;
     String fecha;
-    String descripcion;
     String contenido;
 
     public Noticias_home() {
     }
 
-    public Noticias_home(String titulo, String fecha, String descripcion, String contenido) {
+    public Noticias_home(String titulo, String url, String fecha, String contenido) {
         this.titulo = titulo;
+        this.url=url;
         this.fecha = fecha;
-        this.descripcion = descripcion;
         this.contenido = contenido;
     }
 
@@ -24,6 +24,14 @@ public class Noticias_home {
         this.titulo = titulo;
     }
 
+    public String getUrl(){
+        return url;
+    }
+
+    public void setUrl(String url){
+        this.url=url;
+    }
+
     public String getFecha() {
         return fecha;
     }
@@ -32,13 +40,6 @@ public class Noticias_home {
         this.fecha = fecha;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
 
     public String getContenido() {
         return contenido;

@@ -47,6 +47,7 @@ public class admin_asignarcursoaprofesor extends Fragment {
     String id1,id2;
     String idd1,idd2;
     Button agregar;
+    String nombre,nombref;
 
     cursoaprofesorModel cursoaprofesorModel;
 
@@ -102,6 +103,7 @@ public class admin_asignarcursoaprofesor extends Fragment {
                 DatabaseReference dbr = FirebaseDatabase.getInstance().getReference()
                         .child("Personal").child(idd2).child("CursoAsignado").child(idd1);
                 cursoaprofesorModel.setIdcurso(idd1);
+                cursoaprofesorModel.setNombre(nombref);
 
                 dbr.setValue(cursoaprofesorModel).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -150,14 +152,13 @@ public class admin_asignarcursoaprofesor extends Fragment {
     }
 
     public void llenarcurso(){
-
             final List<cargarcursoModel> Cursos=new ArrayList<>();
             databaseReference.child("Cursos").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     for (DataSnapshot ds : dataSnapshot.getChildren()) {
                         id1 = ds.getKey();
-                        String nombre = ds.child("nombre").getValue(String.class);
+                        nombre = ds.child("nombre").getValue(String.class);
                         Cursos.add(new cargarcursoModel(id1, nombre));
                     }
                     ArrayAdapter<cargarcursoModel> areasAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, Cursos);
@@ -166,6 +167,7 @@ public class admin_asignarcursoaprofesor extends Fragment {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                             idd1=Cursos.get(position).getNombrecurso();
+                            nombref=Cursos.get(position).getId();
                         }
 
                         @Override

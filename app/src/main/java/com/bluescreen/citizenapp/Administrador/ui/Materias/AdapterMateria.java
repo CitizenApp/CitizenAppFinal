@@ -49,6 +49,8 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
     public AdapterMateria(List<Materias> materias) {
     }
 
+
+
     @NonNull
     @Override
     public MateriasHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -59,9 +61,10 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
     @Override
     public void onBindViewHolder(@NonNull MateriasHolder holder, final int position) {
         holder.txtTitulo.setText(materias.get(position).getNombre());
-      ;
 
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -82,7 +85,7 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
         public MateriasHolder(@NonNull View itemView) {
             super(itemView);
             txtTitulo = itemView.findViewById(R.id.txtTitulomateria);
-            m=itemView.findViewById(R.id.imgmess);
+            //m=itemView.findViewById(R.id.imgmess);
            b=itemView.findViewById(R.id.b);
 
            b.setOnClickListener(new View.OnClickListener() {
@@ -96,21 +99,7 @@ public class AdapterMateria extends RecyclerView.Adapter<AdapterMateria.Materias
 
            });
 
-           m.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View v) {
 
-                   //arreglar esto
-                   Fragment fragment = new ChatAlumnosFragment();
-                   FragmentManager fragmentManager = ((FragmentActivity) mContext).getSupportFragmentManager();
-                   FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                   fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
-                   fragmentTransaction.addToBackStack(null);
-                   fragmentTransaction.commit();
-
-
-               }
-           });
 
 
         }
