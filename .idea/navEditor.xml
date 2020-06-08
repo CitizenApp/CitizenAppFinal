@@ -32,18 +32,6 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="nav_a">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="nav_agregaralumnos">
                     <value>
                       <LayoutPositions>
@@ -69,6 +57,18 @@
                     </value>
                   </entry>
                   <entry key="nav_agregarmaterias">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_agregarnoticia">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -188,6 +188,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="nav_clasesonline">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="nav_desafios">
                     <value>
                       <LayoutPositions>
@@ -237,6 +249,18 @@
                     </value>
                   </entry>
                   <entry key="nav_subirArchivos">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_subirAvisos">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">

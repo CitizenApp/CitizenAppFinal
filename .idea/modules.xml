@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CitizenApp.iml" filepath="$PROJECT_DIR$/CitizenApp.iml" group="CitizenApp" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="CitizenApp/app" />
+      <module fileurl="file://$PROJECT_DIR$/commonlib/commonlib.iml" filepath="$PROJECT_DIR$/commonlib/commonlib.iml" group="CitizenApp/commonlib" />
+      <module fileurl="file://$PROJECT_DIR$/mobilertc/mobilertc.iml" filepath="$PROJECT_DIR$/mobilertc/mobilertc.iml" group="CitizenApp/mobilertc" />
     </modules>
   </component>
 </project>

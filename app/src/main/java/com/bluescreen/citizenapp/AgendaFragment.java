@@ -1,12 +1,40 @@
 package com.bluescreen.citizenapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import com.bluescreen.citizenapp.DetallesArchivos.Model;
+import com.bluescreen.citizenapp.Profe.SubirAvisos.Adapteravisoss;
+import com.bluescreen.citizenapp.Profe.SubirAvisos.AvisosModel;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
+
+import static android.content.Context.MODE_PRIVATE;
+import static com.zipow.videobox.confapp.ConfMgr.getApplicationContext;
 
 
 /**
@@ -24,7 +52,18 @@ public class AgendaFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    LinearLayout lac;
+    Boolean firs;
+    RecyclerView recyclerView;
+    List<AvisosModel> models;
 
+    public String sessionId;
+    DatabaseReference databaseReference;
+    FirebaseAuth auth;
+    FirebaseDatabase firebaseDatabase;
+    FirebaseUser user;
+    public String userId;
+    Adapteravisoss adapteravisoss;
 
 
     public AgendaFragment() {
@@ -63,5 +102,80 @@ public class AgendaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_agenda, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        models=new ArrayList<>();
+        FirebaseUser fu = FirebaseAuth.getInstance().getCurrentUser() ;
+        userId = fu.getUid();
+        databaseReference = firebaseDatabase.getInstance().getReference();
+        recyclerView=getView().findViewById(R.id.recicleravisos);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setHasFixedSize(true);
+        Boolean isFirstRun = getActivity().getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getBoolean("isFirstRun", true);
+
+        if (isFirstRun) {
+            new MaterialShowcaseView.Builder(getActivity())
+                    .setTarget(recyclerView)
+                    .setMaskColour(getResources().getColor(R.color.colorAccent))
+                    .setDismissText("Entendido")
+                    .setShapePadding(130)
+                    .setContentText("Bienvenido al Campus Interactivo, Desliza hacia el lado y podras ver tus documentos de cada asignatura")
+                    .show();
+
+        }
+        getActivity().getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("isFirstRun", false).commit();
+
+        DatabaseReference dbr = FirebaseDatabase.getInstance().getReference().child("Personal").child(userId).child("CursoAsignado");
+        dbr.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for(DataSnapshot ds : dataSnapshot.getChildren()){
+                        final String idcurso = ds.getKey();
+                        databaseReference.child("Cursos").child(idcurso).child("Avisos").addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                if(dataSnapshot.exists()){
+
+                                    for(DataSnapshot dss : dataSnapshot.getChildren()){
+
+                                        AvisosModel m=dss.getValue(AvisosModel.class);
+                                        models.add(m);
+
+                                    }
+                                    adapteravisoss=new Adapteravisoss(getContext(), models);
+                                    adapteravisoss.notifyDataSetChanged();
+                                    recyclerView.setAdapter(adapteravisoss);
+                                    Collections.reverse(models);
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
+
+
+
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+
+
     }
 }

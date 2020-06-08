@@ -12,5 +12,10 @@
             android:id="@+id/nav_subirArchivos"
             android:icon="@drawable/ic_file_upload_black_24dp"
             android:title="Subir Archivos" />
+
+        <item
+            android:id="@+id/nav_subirAvisos"
+            android:icon="@drawable/informacion"
+            android:title="Subir Avisos" />
     </group>
 </menu>

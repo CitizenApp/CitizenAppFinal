@@ -11,11 +11,24 @@
         android:label="Inicio"
         tools:layout="@layout/fragment_home">
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_subirAvisos"
+        android:name="com.bluescreen.citizenapp.Profe.SubirAvisos.ProfeSubirAvisos"
+        android:label="Subir Avisos"
+        tools:layout="@layout/fragment_profe_subir_avisos">
+    </fragment>
     <fragment
         android:id="@+id/nav_cerrarSesion"
         android:name="com.bluescreen.citizenapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_clasesonline"
+        android:name="com.bluescreen.citizenapp.videollamada.AlumnoVideollamada"
+        android:label="Mis clases Online"
+        tools:layout="@layout/fragment_alumno_videollamada" />
 
     <fragment
         android:id="@+id/nav_publicarNoticia"
@@ -24,9 +37,9 @@
         tools:layout="@layout/crear_noticia_home_fragment" />
     <fragment
         android:id="@+id/nav_campus"
-        android:name="com.bluescreen.citizenapp.ui.campusInteractivoFragment"
-        android:label="Selecciona Asignatura"
-        tools:layout="@layout/fragment_campus_interactivo" />
+        android:name="com.bluescreen.citizenapp.Fragmentaula"
+        android:label="Campus Interactivo"
+        tools:layout="@layout/fragment_fragmentaula" />
     <fragment
         android:id="@+id/nav_desafios"
         android:name="com.bluescreen.citizenapp.ui.desafiosTabFragment"

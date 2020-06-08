@@ -15,12 +15,35 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        app:itemIconTint="#03A9F4"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_inicio"
-        app:menu="@menu/activity_inicio_drawer" />
+        app:menu="@menu/activity_inicio_drawer" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="6dp">
 
-</androidx.drawerlayout.widget.DrawerLayout>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/cerrarsesion"
+                android:background="@drawable/ic_power_settings_new_black_24dp">
+
+            </ImageButton>
+        </LinearLayout>
+
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>

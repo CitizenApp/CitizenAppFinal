@@ -6,10 +6,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bluescreen.citizenapp.Objects.Adapter;
+import com.bluescreen.citizenapp.Objects.Noticias_home;
 import com.bluescreen.citizenapp.ui.gallery.GalleryFragment;
 import com.bluescreen.citizenapp.ui.home.HomeFragment;
 import com.bumptech.glide.Glide;
@@ -18,6 +22,11 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 
 import androidx.annotation.NonNull;
@@ -28,6 +37,13 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.view.View.INVISIBLE;
 
 public class InicioActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private TextView nombreUsuario, emailUsuario;
@@ -36,6 +52,14 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
     FirebaseStorage firebaseStorage;
 
     View mView;
+    ImageButton cerrar;
+
+    RecyclerView rv;
+    List<Noticias_home> noticias;
+    Adapter adapter;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference db ;
+    private HomeFragment.OnFragmentInteractionListener mListener;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -44,13 +68,31 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        //rv = findViewById(R.id.ppkl);
+        //LinearLayoutManager linearLayout=new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
+        //rv.setLayoutManager(linearLayout);
+        //rv.setHasFixedSize(true);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        //db = firebaseDatabase.getReference("noticias_home");
+
         setSupportActionBar(toolbar);
+        cerrar=findViewById(R.id.cerrarsesion);
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(getApplicationContext(), "Sesion cerrada correctamente", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -61,6 +103,7 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
 
         //-----------------------------------------------------------------------------------------
         firebaseStorage = FirebaseStorage.getInstance();
@@ -92,6 +135,35 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+
+        //db.addValueEventListener(new ValueEventListener() {
+            //@Override
+            //public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                //noticias = new ArrayList<>();
+               // for (DataSnapshot postsnap: dataSnapshot.getChildren()) {
+                    //Noticias_home noticia = postsnap.getValue(Noticias_home.class);
+                   // noticias.add(noticia) ;
+
+
+                //}
+                //adapter = new Adapter(noticias, getApplicationContext());
+               // rv.setAdapter(adapter);
+
+            //}
+
+           // @Override
+           // public void onCancelled(@NonNull DatabaseError databaseError) {
+
+           // }
+       // });
+
     }
 
 

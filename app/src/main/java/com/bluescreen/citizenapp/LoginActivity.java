@@ -148,7 +148,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
         if (TextUtils.isEmpty(password)){
-            Toast.makeText(this,"Se debe ingresar un email", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Se debe ingresar una contraseña", Toast.LENGTH_LONG).show();
             return;
         }
 

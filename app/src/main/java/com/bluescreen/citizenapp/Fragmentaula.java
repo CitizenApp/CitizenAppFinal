@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.bluescreen.citizenapp.ui.campusInteractivoFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,8 +77,8 @@ public class Fragmentaula extends Fragment {
         View view= inflater.inflate(R.layout.fragment_fragmentaula, container, false);
         List<Fragment> list=new ArrayList<>();
         list.add(new AgendaFragment());
-        list.add(new DocumentosFragment());
-        list.add(new AvisosFragment());
+        list.add(new campusInteractivoFragment());
+
         MyPagerAdapter myPagerAdapter =
                 new MyPagerAdapter(
                         getFragmentManager(),list

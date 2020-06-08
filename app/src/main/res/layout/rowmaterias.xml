@@ -56,11 +56,11 @@
 
 
                 <Button
-                   android:layout_marginLeft="230dp"
+                   android:layout_marginLeft="220dp"
                     android:layout_marginTop="55dp"
                     android:id="@+id/b"
                     android:textColor="#38D63E"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="40dp"
                     android:text="Ver" />
 
