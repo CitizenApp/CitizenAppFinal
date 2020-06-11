@@ -2111,15 +2111,18 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable agenda
 drawable agendal
+drawable apoderado
 drawable art
 drawable artesbg
 drawable asistencia
+drawable atencion
 drawable autoestima
 drawable avatar_phone_green
 drawable avd_hide_password
 drawable avd_show_password
 drawable avisosborder
 drawable backbox
+drawable backgroundbar
 drawable backgroundpurple
 drawable biblioteca
 drawable bn
@@ -2176,6 +2179,7 @@ drawable fab_bg_normal
 drawable ff
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable grafico
 drawable grupo
 drawable hg
 drawable his
@@ -2238,11 +2242,13 @@ drawable icon_select_participant_item_telephone
 drawable icon_waiting_room_chat
 drawable informacion
 drawable inspeccion
+drawable is
 drawable justificativo
 drawable lapiz
 drawable lenguaje
 drawable lenguajebg
 drawable libro
+drawable libross
 drawable login_button_bk
 drawable login_shape_bk
 drawable logo3
@@ -2261,6 +2267,7 @@ drawable mtrl_ic_error
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
+drawable navegador
 drawable navigation_empty_icon
 drawable negocio
 drawable nh
@@ -2285,6 +2292,7 @@ drawable porcentaje
 drawable pp
 drawable ppepe
 drawable profesor
+drawable proximo
 drawable punto
 drawable qr
 drawable question
@@ -2302,6 +2310,7 @@ drawable reaction_1f44f_1f3fe
 drawable reaction_1f44f_1f3ff
 drawable realestate
 drawable registro
+drawable reunion
 drawable science
 drawable side_nav_bar
 drawable sip_call
@@ -4089,6 +4098,7 @@ id adjust_width
 id agenda
 id agregar_btn
 id agregaralumnoacurso
+id agregarapoderado
 id agregarasignacion
 id agregarbb
 id agregarcurso
@@ -4104,6 +4114,7 @@ id alumnos
 id always
 id annotateView
 id annotate_bar
+id apoderadobtn
 id appImg
 id appsListView
 id arrow
@@ -4135,6 +4146,7 @@ id blocking
 id bookmark
 id bookmarkListView
 id bookmarkTitleBar
+id botonbar
 id bottom
 id bottomBar
 id bottom_divider
@@ -4593,6 +4605,7 @@ id confViewContentLayout
 id confirm_button
 id contactListView
 id container
+id containerfrag
 id contenido_noticiasHome2
 id content
 id contentContainer
@@ -4601,6 +4614,7 @@ id content_box
 id content_file_list_view
 id contextMenuTitle
 id contraseña_et
+id contraseñaapoderado
 id contraseñaprofe_et
 id coordinator
 id correo
@@ -4721,6 +4735,8 @@ id emailRegistro_et
 id emailRegistroalumno_et
 id emailRegistroprofe_et
 id emailUsuarioMenu
+id emaila
+id emailapoderado
 id emoji1
 id emoji2
 id emoji3
@@ -4884,6 +4900,7 @@ id id_wb_title
 id id_wb_undo
 id id_wb_yellow_color
 id id_wb_yellow_color_tip
+id idreciclerapo
 id ifRoom
 id imView
 id image
@@ -4893,6 +4910,13 @@ id imageText
 id imageVIew
 id imageView
 id imageView10
+id imageView11
+id imageView12
+id imageView13
+id imageView14
+id imageView15
+id imageView16
+id imageView17
 id imageView2
 id imageView3
 id imageView4
@@ -5037,6 +5061,7 @@ id img_off
 id img_presence
 id in_meeting
 id info
+id iniciom
 id inputLayout
 id inputPromt
 id inputurl
@@ -5149,6 +5174,7 @@ id ll_tap
 id loading_progress
 id loginInternational
 id login_btn
+id logina
 id loguearse_btn
 id mListContainer
 id masked
@@ -5222,6 +5248,7 @@ id name
 id nameTV
 id nav_Chat
 id nav_Inspectoria
+id nav_agregarApoderados
 id nav_agregaralumnos
 id nav_agregarcurso
 id nav_agregarmaterias
@@ -5250,6 +5277,8 @@ id navigation_header_container
 id never
 id newMessage
 id newPageBtn
+id nn
+id nn2
 id noScroll
 id no_fill_large_indicator
 id nombre
@@ -5257,6 +5286,7 @@ id nombreTareaAlumnosCvTv
 id nombreUsuarioChatAlumnosTv
 id nombreUsuarioMenu
 id nombrealumno
+id nombreapoderado
 id nombreprofe
 id nombreusuarioCardviewChatAlumnosTv
 id none
@@ -5718,6 +5748,7 @@ id parent_matrix
 id pass
 id passLogin_et
 id passRegistro_et
+id passa
 id password_toggle
 id pbFileStatus
 id pbTranscriptLoadingProgress
@@ -5785,9 +5816,9 @@ id recyclerViewAudioOption
 id redocu
 id registro
 id registroNombre_et
-id regitrobtn
 id repeat
 id resultListView
+id reuniones
 id right
 id rightArrow
 id right_icon
@@ -5802,6 +5833,7 @@ id rounded
 id row_post_img
 id row_post_profile_img
 id rut_et
+id rutapoderado
 id rutprofe_et
 id rv_photos
 id savePhotoBtn
@@ -5917,6 +5949,7 @@ id spacer
 id speakerDivider
 id spinner
 id spinner2
+id spinner3
 id spinner_justificacion
 id spinneralumno
 id spinneralumnocurso
@@ -6012,7 +6045,16 @@ id textView3
 id textView30
 id textView31
 id textView32
+id textView33
+id textView34
+id textView35
+id textView36
+id textView37
+id textView38
+id textView39
 id textView4
+id textView40
+id textView41
 id textView5
 id textView6
 id textView7
@@ -6708,11 +6750,13 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_administrador_principal
+layout activity_apoderadologin
 layout activity_detalles_archivo
 layout activity_inicio
 layout activity_login
 layout activity_main
 layout activity_mmimage_list
+layout activity_principal_apoderado
 layout activity_profe_inicio
 layout activity_profeactivity
 layout activity_register
@@ -6748,6 +6792,7 @@ layout design_text_input_start_icon
 layout dialogosubiraviso
 layout fragment_admin__asignar_materi_a_profe
 layout fragment_admin_agregar_alumnos
+layout fragment_admin_agregar_apoderador
 layout fragment_admin_agregar_noticias
 layout fragment_admin_agregar_profesores
 layout fragment_admin_agregaralumnosacurso
@@ -6758,6 +6803,8 @@ layout fragment_adminasignarmateriasalumnos
 layout fragment_agenda
 layout fragment_agenda_ciudadana
 layout fragment_alumno_videollamada
+layout fragment_apoderado_video
+layout fragment_apoderadohome
 layout fragment_asignar_curso_alumno
 layout fragment_asistencia_inspectoria
 layout fragment_avisos
@@ -6839,6 +6886,7 @@ layout notification_tip
 layout row_noticias
 layout rowdocu
 layout rowmaterias
+layout rowreu
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -7425,6 +7473,7 @@ menu activity_administrador_principal_drawer
 menu activity_inicio_drawer
 menu activity_profe_inicio_drawer
 menu administrador_principal
+menu apoderadoxml
 menu inicio
 menu profe_inicio
 mipmap ic_launcher

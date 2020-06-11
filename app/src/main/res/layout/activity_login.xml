@@ -23,12 +23,12 @@
             android:layout_height="0dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/regitrobtn"
+            android:id="@+id/apoderadobtn"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="170dp"
-            android:text="Recuperar Contraseña"
+            android:text="Soy Un Apoderado"
             android:textColor="#9C27B0" />
     </LinearLayout>
 

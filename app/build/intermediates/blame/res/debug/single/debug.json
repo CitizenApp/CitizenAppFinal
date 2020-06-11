@@ -16,16 +16,20 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\informacion.png"
     },
     {
-        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_comunicados.xml.flat",
-        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_comunicados.xml"
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_science.png.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\science.png"
     },
     {
-        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_comunicados.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_comunicados.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_admin_agregar_apoderador.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_admin_agregar_apoderador.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_estudiando.png.flat",
@@ -42,6 +46,10 @@
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_apoderadohome.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_apoderadohome.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_bg_topheader.xml.flat",
@@ -108,12 +116,16 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\ic_check_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login_button_bk.xml.flat",
-        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\login_button_bk.xml"
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_apoderadologin.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\activity_apoderadologin.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_avisos.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_avisos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login_button_bk.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\login_button_bk.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_profe_inicio.xml.flat",
@@ -122,6 +134,10 @@
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profe_subir_avisos.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_profe_subir_avisos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_apoderado_video.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_apoderado_video.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_biblioteca.png.flat",
@@ -244,6 +260,14 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\menu\\activity_administrador_principal_drawer.xml"
     },
     {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\menu_apoderadoxml.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\menu\\apoderadoxml.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_libross.png.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\libross.png"
+    },
+    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_cursoprofe.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\list_item_cursoprofe.xml"
     },
@@ -324,6 +348,10 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\rowmaterias.xml"
     },
     {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_grafico.png.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\grafico.png"
+    },
+    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_asistencia_inspectoria.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_asistencia_inspectoria.xml"
     },
@@ -346,6 +374,10 @@
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_noticias.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\row_noticias.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reunion.png.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\reunion.png"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backbox.xml.flat",
@@ -396,6 +428,10 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\electronicaf.png"
     },
     {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_atencion.png.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\atencion.png"
+    },
+    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
@@ -420,6 +456,10 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_admin__asignar_materi_a_profe.xml"
     },
     {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_is.png.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\is.png"
+    },
+    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_gallery.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\ic_menu_gallery.xml"
     },
@@ -438,6 +478,10 @@
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navegador.png.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\navegador.png"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
@@ -506,6 +550,10 @@
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_inspectoria.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_inspectoria.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backgroundbar.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\backgroundbar.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_cardview_tareas_alumnos.xml.flat",
@@ -588,6 +636,10 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\cardview_mensajes_chat_alumnos.xml"
     },
     {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_apoderado.png.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\apoderado.png"
+    },
+    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_punto.png.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\punto.png"
     },
@@ -624,12 +676,20 @@
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\fragment_turnos.xml"
     },
     {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_proximo.png.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\proximo.png"
+    },
+    {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_curso2.png.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\curso2.png"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_rowreu.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\rowreu.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_educacion.png.flat",
@@ -670,6 +730,10 @@
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_attendance_recap.xml.flat",
         "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\drawable\\ic_attendance_recap.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_principal_apoderado.xml.flat",
+        "source": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\src\\main\\res\\layout\\activity_principal_apoderado.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\Desktop\\CitizenAppFinalfinal\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",

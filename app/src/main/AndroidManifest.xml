@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetallesArchivos.DetallesArchivo"></activity>
+        <activity android:name=".Apoderados.Apoderadologin"></activity>
+        <activity android:name=".PrincipalApoderado" />
+        <activity android:name=".DetallesArchivos.DetallesArchivo" />
         <activity
             android:name=".Administrador.AdministradorPrincipal"
             android:label="@string/title_activity_administrador_principal"

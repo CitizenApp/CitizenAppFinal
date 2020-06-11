@@ -18,6 +18,11 @@
             android:id="@+id/nav_agregarprofesores"
             android:icon="@drawable/ic_create_black_24dp"
             android:title="Agregar Profesores" />
+
+        <item
+            android:id="@+id/nav_agregarApoderados"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="Agregar Apoderado" />
         <item
             android:id="@+id/nav_agregaralumnos"
             android:icon="@drawable/ic_create_black_24dp"

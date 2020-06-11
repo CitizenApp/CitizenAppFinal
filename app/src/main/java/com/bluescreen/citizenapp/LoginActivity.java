@@ -16,6 +16,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.bluescreen.citizenapp.Administrador.AdministradorPrincipal;
+import com.bluescreen.citizenapp.Administrador.ui.AgregarApoderados.ModelApoderados;
+import com.bluescreen.citizenapp.Apoderados.ApoderadoVideo;
+import com.bluescreen.citizenapp.Apoderados.Apoderadologin;
 import com.bluescreen.citizenapp.Profe.Profeactivity;
 import com.bluescreen.citizenapp.Profe.Registerprueba;
 import com.bluescreen.citizenapp.Profe.usuarios;
@@ -52,7 +55,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         correoLoginTxt = (EditText) findViewById(R.id.emailLogin_et);
         passLoginTxt = (EditText) findViewById(R.id.passLogin_et);
         iniciarSesionBtn = (Button) findViewById(R.id.login_btn);
-        registro=(Button)findViewById(R.id.regitrobtn);
+        registro=(Button)findViewById(R.id.apoderadobtn);
 
         databaseReference=FirebaseDatabase.getInstance().getReference("Personal");
 
@@ -82,9 +85,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
 
-            case R.id.regitrobtn:
-                //Intent intent2 = new Intent(getApplication(), RegisterActivity.class);
-                //startActivity(intent2);
+            case R.id.apoderadobtn:
+                Intent intent2 = new Intent(getApplication(), Apoderadologin.class);
+                startActivity(intent2);
                 break;
 
         }
@@ -110,6 +113,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     usuarios usu= dataSnapshot.getValue(usuarios.class);
                     int userType = (usu.getRol());
+
                     //for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     // Toast.makeText(signinActivity.this, value, Toast.LENGTH_SHORT).show();
 
@@ -126,7 +130,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Intent intent3 = new Intent(getApplication(), AdministradorPrincipal.class);
                             startActivity(intent3);
                             break;
+
                     }
+
+
                 }
 
                 @Override

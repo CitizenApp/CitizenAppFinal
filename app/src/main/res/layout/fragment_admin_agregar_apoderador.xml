@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Administrador.ui.AgregarApoderados.adminAgregarApoderador">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="329dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Agregar Apoderados"
+        android:textColor="#4C98AF"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nombreapoderado"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/emailapoderado"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Correo Electronico"
+        android:inputType="textEmailAddress"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreapoderado" />
+
+    <EditText
+        android:id="@+id/contraseñaapoderado"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Contraseña"
+        android:inputType="text"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailapoderado" />
+
+    <EditText
+        android:id="@+id/rutapoderado"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#BA68C8"
+        android:ems="10"
+        android:foregroundTint="#BA68C8"
+        android:hint="Rut"
+        android:inputType="text"
+        android:shadowColor="#BA68C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contraseñaapoderado" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/agregarapoderado"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
+        android:text="Agregar"
+        android:textColor="#21F324"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner3"
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="#ba68c8" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Apoderado Del Alumno:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rutapoderado" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="212dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
