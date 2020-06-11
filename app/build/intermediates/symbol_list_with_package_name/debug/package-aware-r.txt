@@ -4008,6 +4008,7 @@ id BOTH
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id CalendarioView
 id DescripcionTareaCvTv
 id DescripcionTareaTv
 id FUNCTION
@@ -4185,6 +4186,7 @@ id btnCallinCountry
 id btnCamera
 id btnCancel
 id btnCancelTransfer
+id btnCancelarRecordatorioAdd
 id btnChat
 id btnChatWithAll
 id btnChats
@@ -4332,6 +4334,7 @@ id btnRaiseHand
 id btnRate
 id btnRecommend
 id btnReconnect
+id btnRecordatorioAdd
 id btnRectangle
 id btnRedo
 id btnRefresh
@@ -4636,6 +4639,7 @@ id decor_content_parent
 id default_activity_button
 id delete
 id descargarTareaBtn
+id descripcionRecordatorioAdd
 id descripcion_noticiasHome
 id descripcionoticia
 id description_info_tv
@@ -4767,6 +4771,7 @@ id fade
 id fadeview
 id fadeview1
 id favoriteListView
+id fechaRecordatorioAdd
 id fechaTareaCvTv
 id fecha_noticiaHome
 id fields_extend_linear
@@ -4839,6 +4844,7 @@ id hint_layout
 id home
 id homeAsUp
 id horaCardviewChatAlumnosTv
+id horaRecordatorioAdd
 id horizontal
 id hostByView
 id icon
@@ -5143,6 +5149,7 @@ id listContainer
 id listCustomGroups
 id listDivider
 id listMode
+id listRecordatorios
 id listSelected
 id listView
 id listViewContentFiles
@@ -5171,6 +5178,7 @@ id llTitle
 id llUpvote
 id ll_button
 id ll_tap
+id lo
 id loading_progress
 id loginInternational
 id login_btn
@@ -5248,6 +5256,7 @@ id name
 id nameTV
 id nav_Chat
 id nav_Inspectoria
+id nav_agendat
 id nav_agregarApoderados
 id nav_agregaralumnos
 id nav_agregarcurso
@@ -5282,6 +5291,7 @@ id nn2
 id noScroll
 id no_fill_large_indicator
 id nombre
+id nombreRecordatorioAdd
 id nombreTareaAlumnosCvTv
 id nombreUsuarioChatAlumnosTv
 id nombreUsuarioMenu
@@ -6750,6 +6760,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_administrador_principal
+layout activity_agregar_recordatorio
 layout activity_apoderadologin
 layout activity_detalles_archivo
 layout activity_inicio
@@ -6763,6 +6774,7 @@ layout activity_register
 layout activity_registerprueba
 layout activity_starred
 layout activity_starred_message
+layout activity_ver_recordatorio
 layout app_bar_administrador_principal
 layout app_bar_inicio
 layout app_bar_profe_inicio
@@ -6803,6 +6815,7 @@ layout fragment_adminasignarmateriasalumnos
 layout fragment_agenda
 layout fragment_agenda_ciudadana
 layout fragment_alumno_videollamada
+layout fragment_alumnoagendalocal
 layout fragment_apoderado_video
 layout fragment_apoderadohome
 layout fragment_asignar_curso_alumno
@@ -6886,6 +6899,7 @@ layout notification_tip
 layout row_noticias
 layout rowdocu
 layout rowmaterias
+layout rowrecord
 layout rowreu
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

@@ -70,6 +70,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.bluescreen.citizenapp.Profe.Registerprueba" />
         <activity android:name="com.bluescreen.citizenapp.Profe.Profeactivity" />
+        <activity android:name="com.bluescreen.citizenapp.agendaslocales.AgregarRecordatorioActivity" />
+        <activity android:name="com.bluescreen.citizenapp.agendaslocales.VerRecordatorioActivity" />
         <activity
             android:name="com.bluescreen.citizenapp.ui.desafiosTabbedFragment"
             android:label="@string/title_activity_desafios_tabbed_fragment"

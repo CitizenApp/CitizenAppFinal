@@ -27,6 +27,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Profe.Registerprueba" />
         <activity android:name=".Profe.Profeactivity" />
+        <activity android:name=".agendaslocales.AgregarRecordatorioActivity"></activity>
+        <activity android:name=".agendaslocales.VerRecordatorioActivity" />
         <activity
             android:name=".ui.desafiosTabbedFragment"
             android:label="@string/title_activity_desafios_tabbed_fragment"

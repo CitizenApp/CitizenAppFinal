@@ -1,5 +1,6 @@
 package com.bluescreen.citizenapp.Apoderados;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,8 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.bluescreen.citizenapp.LoginActivity;
 import com.bluescreen.citizenapp.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -32,6 +37,7 @@ public class Apoderadohome extends Fragment {
     RecyclerView apoderad;
     ArrayList<Modelreu> modelreus;
     Adapterreu adapterreu;
+    FloatingActionButton l;
 
     public Apoderadohome() {
         // Required empty public constructor
@@ -74,6 +80,7 @@ public class Apoderadohome extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        l=getView().findViewById(R.id.lo);
         apoderad=getView().findViewById(R.id.idreciclerapo);
         Integer[] imagenes={R.drawable.libross,R.drawable.libross};
         String[] info={"29-03-2020","21-04-2020"};
@@ -90,5 +97,15 @@ public class Apoderadohome extends Fragment {
         apoderad.setItemAnimator(new DefaultItemAnimator());
         adapterreu=new Adapterreu(modelreus,getContext());
         apoderad.setAdapter(adapterreu);
+
+        l.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(getContext(), "Sesion cerrada correctamente", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -8,6 +8,8 @@
     tools:context=".Apoderados.Apoderadohome">
 
 
+
+
     <TextView
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
@@ -211,4 +213,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView41"
         app:layout_constraintVertical_bias="0.3" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="55dp"
+        app:backgroundTint="#ED4C4C"
+        android:src="@drawable/ic_power_settings_new_black_24dp"
+
+        android:id="@+id/lo"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintStart_toEndOf="@+id/textView34"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 </androidx.constraintlayout.widget.ConstraintLayout>
